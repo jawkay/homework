@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assign.css">
+</head>
+<body>
+    <div class="nav">  
+        <h1 style="color: white;">Assignment Using Function <span class="jk">(James work) </span></h1> 
+    </div>
+    <div class="row" >
+        <div class="col-4">
+          <div id="list-example" class="list-group" style="position: sticky; top: 80px;">
+            <a class="list-group-item list-group-item-action" href="#list-item-1" style="background: rgb(169, 2, 2); color: white;">First</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-2" style="background: black; color: red;">Second</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-3" style="background: rgb(159, 0, 0); color: white;">Third</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-4" style="background: black; color: red;">Fourth</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example">
+            <h4 id="list-item-1" style="color: white;">First</h4>
+            <p><div class="all">
+                <div class="some">
+                    <b> 1.Define 10 reserved javascript keywords and explain their function</b>
+                    Ans: <br>
+                   <span class="st"> 
+                    ABSTRACT
+                    Abstract is a non-access modifier which is applicable for classes, methods but not variables. <br>
+            
+                    ARGUMENT
+                    Argument is an array-like object lists the arguments and a few other properties. <br>
+            
+                    AWAIT
+                    The keyword Await makes JavaScript wait until the promise returns a result. <br>
+            
+                    BOOLEAN
+                    Boolean is used as a function to get the value of a variable, object, conditions, expressions, etc. in terms of true or false. <br>
+            
+                    BREAK
+                    It breaks the loop and continues executing the code after the loop. <br>
+            
+                    BYTE
+                    This uses the javascript typeof() operator to detect what kind of type is variable x and y. <br>
+            
+                    CASE
+                    The switch statement evaluates an expression. The value of the expression is then compared with the values of each case in the structure. <br>
+            
+                    CATCH
+                    This statement allows you to define a block of code to be executed if an error occurs in the try block. <br>
+            
+                    CHAR
+                    The char keyword is a data type that is used to store a single character. <br>
+            
+                    CLASS
+                    Classes are another way of writing constructor functions which can be used in order to create a new object using the new keyword.
+                   </span>
+                </div>
+                <div class="greet">
+                  <h2>WELCOME VISITOR</h2> 
+                  <h4>Click the button below to receive your greeting</h4>  
+                  <button onclick="greet()">Greet Us</button>
+                </div>
+              </div></p>
+            <h4 id="list-item-2" style="color: white;">Second</h4>
+            <p><div class="all">
+                <div class="food">
+                  <h2>WELCOME TO FOOD MATAZ</h2>
+                  <h4>Click the link below to order for food</h4>
+                  <button onclick="seun()">Order</button>
+                </div>
+                <div class="history">
+                  <b>2. write a bref history of JavaScript that covers all version up to ECMA6</b>
+                  <p>JavaScript was invented by Brendan Eich in 1995. <br> It was developed for Netscape 2, and became the ECMA-262 standard in 1997. <br>
+                      After Netscape handed JavaScript over to ECMA, the Mozilla <br> foundation continued to develop 
+                      JavaScript for the Firefox browser. Mozilla's latest <br> version was 1.8.5. (Identical to ES5).
+                      Internet Explorer (IE4) <br> was the first browser to support ECMA-262 Edition 1 (ES1). <br>
+                      Year	ECMA	Browser <br>
+                      1995	 	JavaScript was invented by Brendan Eich <br>
+                      1996	 	Netscape 2 was released with JavaScript 1.0 <br>
+                      1997	 	JavaScript became an ECMA standard (ECMA-262) <br>
+                      1997	ES1	ECMAScript 1 was released <br>
+                      1997	ES1	IE 4 was the first browser to support ES1<br>
+                      1998	ES2	ECMAScript 2 was released<br>
+                      1998	 	Netscape 42 was released with JavaScript 1.3<br>
+                      1999	ES2	IE 5 was the first browser to support ES2 <br>
+                      1999	ES3	ECMAScript 3 was released <br>
+                      2000	ES3	IE 5.5 was the first browser to support ES3 <br>
+                      2000	 	Netscape 62 was released with JavaScript 1.5 <br>
+                      2000	 	Firefox 1 was released with JavaScript 1.5 <br>
+                      2008	ES4	ECMAScript 4 was abandoned <br>
+                      2009	ES5	ECMAScript 5 was released <br>
+                      2011	ES5	IE 9 was the first browser to support ES5 * <br>
+                      2011	ES5	Firefox 4 was released with JavaScript 1.8.5<br>
+                      2012	ES5	Full support for ES5 in Safari 6<br>
+                      2012	ES5	Full support for ES5 in IE 10<br>
+                      2012	ES5	Full support for ES5 in Chrome 23<br>
+                      2013	ES5	Full support for ES5 in Firefox 21<br>
+                      2013	ES5	Full support for ES5 in Opera 15<br>
+                      2014	ES5	Full support for ES5 in all browsers<br>
+                      2015	ES6	ECMAScript 6 was released<br>
+                      2016	ES6	Full support for ES6 in Chrome 51<br>
+                      2016	ES6	Full support for ES6 in Opera 38<br>
+                      2016	ES6	Full support for ES6 in Safari 10<br>
+                      2017	ES6	Full support for ES6 in Firefox 54<br>
+                      2017	ES6	Full support for ES6 in Edge 15<br>
+                      2018	ES6	Full support for ES6 in all browsers<br> 
+                  </p>    
+                </div>
+              </div></p>
+            <h4 id="list-item-3" style="color: white;">Third</h4>
+            <p> <div class="all">
+                <div class="calculator">
+                  <h1>SIMPLE CALCULATOR</h1>
+                  <input type="number" placeholder="input a number" id="input1"><span id="symbol"></span>
+      <input type="number" placeholder="input a number" id="input2"> <span id="answer"></span> <br> <br> <br>
+      <button class="ty" onclick="ade()" >+</button> <button class="ty" onclick="sub()">-</button> <button class="ty" onclick="divi()">/</button> <br> <button class="ty" onclick="muti()">*</button>  
+                </div>
+                <div class="copious">
+                  <b>4. Using copious examples, explain the similarities and <br> differences 
+                    between the var, let, and const keywords in JavaScript.
+                  </b>
+                  Var <br>
+                    It can be redeclare and can be reassign. <br>
+                    Example : <br>
+                    Var Greetings = 'Welcome to my page';<br>
+                    Var Greetings = 'Compliment of the season'; <br><br>
+                    Let <br>
+                    It cannot be redeclare but can be reassign <br>
+                    Example : <br>
+                    Let Greetings = 'Welcome to my page';<br>
+                    Greetings = Compliment of the season; <br> <br>
+                    Const <br>
+                    It cannot be redeclare, it is a constant <br>
+                    Example : <br>
+                    Const VoterAge= 18;
+                  
+                </div>
+              </div></p>
+            <h4 id="list-item-4" style="color: white;">Fourth</h4>
+            <p> <div class="copious">
+                <b>4. Using copious examples, explain the similarities and <br> differences 
+                  between the var, let, and const keywords in JavaScript.
+                </b>
+                Var <br>
+                  It can be redeclare and can be reassign. <br>
+                  Example : <br>
+                  Var Greetings = 'Welcome to my page';<br>
+                  Var Greetings = 'Compliment of the season'; <br><br>
+                  Let <br>
+                  It cannot be redeclare but can be reassign <br>
+                  Example : <br>
+                  Let Greetings = 'Welcome to my page';<br>
+                  Greetings = Compliment of the season; <br> <br>
+                  Const <br>
+                  It cannot be redeclare, it is a constant <br>
+                  Example : <br>
+                  Const VoterAge= 18;
+                
+              </div>
+            </div>
+            <div class="all">
+              <div class="table">
+                <b>Differences and similarities between (==,===,!=, !==) </b>
+              <table border="2" cellpadding="4">
+                  <tr>
+                      <th colspan="2">Differences between </th>
+                      <!-- <td>dff</td> -->
+                  </tr>
+                  <tr>
+                      <th>==</th>
+                      <td>it means equal to</td>
+                  </tr>
+                  <tr>
+                      <th>===</th>
+                      <td>it means that the value mush be equal in value and datatype</td>
+                  </tr>
+                  <tr>
+                      <th>!=</th>
+                      <td>it means it is not equal to</td>
+                  </tr>
+                  <tr>
+                      <th>!==</th>
+                      <td>it means it not equal in vlaue and datatype</td>
+                  </tr>
+              </table><br>
+              <table border="2" cellpadding="8">
+                  <tr>
+                      <th colspan="2">Similarities between</th>
+                  </tr>
+                  <tr>
+                      <th>==</th>
+                      <td rowspan="4">They are use to compare between <b>Operads</b></td>
+                  </tr>
+                  <tr>
+                      <th>===</th>
+                      <!-- <td>it is use to compare between <b>Operads</b></td> -->
+                  </tr>
+                  <tr>
+                      <th>!=</th>
+                      <!-- <td>it is use to compare between <b>Operads</b></td> -->
+                  </tr>
+                  <tr>
+                      <th>!==</th>
+                      <!-- <td>it is use to compare between <b>Operads</b></td> -->
+                  </tr>
+              </table>
+              </div>
+              <div class="nigeria">
+                <h1>GUESS THE NIGERIAN AGE GAME</h1>
+                <h4>(using Switch) </h4>
+                <button onclick="james()">Start Game</button>
+              </div>
+            </div></p>
+          </div>
+        </div>
+      </div>
+      <script>
+        function greet(){
+          let a= new Date(). getHours();
+            if(a>00 && a<11){
+           alert('Good Morning')
+          }
+         else if(a>11 && a<16){
+         alert('Good afternoon')
+          }
+        else{
+         alert('Good Evening')
+        };
+        };
+        function seun(){
+          let resturant={
+        name: 'chicken Republic',
+        categories: ['aficandish','chinesedish','calarbadish','indiadish','drink','soup','meat',],
+        drink: ['chivita','chiexotic','cocoa','fanta','7up','evabottlewater',],
+        soup:['egusi','ewedu','stew','ogbono','okoro',],
+        swallow:['amala','semovita','akpu','fufu','eba',],
+        owner: 'mr okoro',
+        location: 'bodija',
+    };
+    alert(`i want ${resturant.categories[5]} ${resturant.soup[0]} and ${resturant.swallow[4]} i also want ${resturant.drink[3]}, thanks`);
+        };
+        function james(){
+          let age=prompt('what is Nigerian age ?');
+          let d=+age;
+          switch(d){
+        case 50: alert('not close');
+        break;
+        case 59: alert('close');
+        break;
+        case 60: alert(' almost correct');
+        break;
+        case 63: alert('correct');
+        break;
+        case 64: alert('close');
+        break;
+        case 65: alert('close');
+        break;
+        default: alert('wrong');
+    };
+        };
+       function  ade(){
+        let a=document.getElementById('input1').value;
+        let b=document.getElementById('input2').value;
+        a=+a;
+        b=+b;
+        let k=a+b;
+        let c=document.getElementById('symbol').innerHTML ='+';
+        let d=document.getElementById('answer').innerHTML = `=  ${k}`;
+       };
+       function sub(){
+        let g=document.getElementById('input1').value;
+        let h=document.getElementById('input2').value;
+        g=+g;
+        h=+h;
+        let j=g-h;
+        let s=document.getElementById('symbol').innerHTML="-";
+        let r=document.getElementById('answer').innerHTML=`= ${j}`;
+       }
+       function divi(){
+        let t=document.getElementById('input1').value;
+        let e=document.getElementById('input2').value;
+        t=+t;
+        e=+e;
+        let u=t/e;
+        let q=document.getElementById('symbol').innerHTML="/";
+        let w=document.getElementById('answer').innerHTML= `= ${u}`
+       }
+       function muti(){
+        let y=document.getElementById('input1').value;
+        let v=document.getElementById('input2').value;
+        y=+y;
+        v=+v;
+        let z=y*v;
+        let p=document.getElementById('symbol').innerHTML="*";
+        let o=document.getElementById('answer').innerHTML=`= ${z}`;
+       }
+     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
