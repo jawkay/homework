@@ -4,7 +4,7 @@ body{
     background: linear-gradient(90deg, rgb(0, 0, 0) 10%, rgb(79, 0, 0) 70%);
 }
 .nav{
-    background: rgb(145, 2, 2);
+    background: rgb(77, 2, 2);
     color: white;
     display: flex;
     flex-direction: row;
@@ -17,7 +17,6 @@ body{
 .some{
     background: linear-gradient(90deg, rgb(152, 4, 4) 10%, black 70%);
     margin-top: 10px;
-    padding: 2px 20px 20px 20px;
     box-shadow: 0px 0px 10px rgb(111, 7, 7);
     border-radius: 10px;
     color: white
@@ -81,7 +80,6 @@ button:hover{
 }
 .history{
     background:linear-gradient(90deg, rgb(152, 4, 4) 10%, black 70%);
-    padding: 2px 10px 10px 10px ;
     margin-top: 10px;
     box-shadow: 0px 0px 10px rgb(117, 4, 4);
     border-radius: 10px;
@@ -95,13 +93,11 @@ button:hover{
     background: grey;
     margin-top: 10px;
     text-align: center;
-    padding: 2px 10px 10px 8px;
     box-shadow: 0px 0px 10px rgb(150, 4, 4);
     border-radius: 10px;
 }
 .calculator{
     background: grey;
-    margin: 10px;
     box-shadow: 0px 0px 10px rgb(107, 4, 4);
     border-radius: 10px;
     text-align: center;
