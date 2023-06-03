@@ -158,6 +158,12 @@ table{
     height: 50px;
     animation: sij 1s ease 2s infinite alternate;
 }
+@media screen and (max-width: 768px) {
+    .song{
+        margin-top: 150%;
+        margin-left: 80%;
+    }
+}
 @keyframes sij {
     0%{
         box-shadow:  inset 0px 10px 10px green;
