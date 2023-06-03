@@ -154,6 +154,8 @@ table{
     align-items: center;
     font-size: 25px;
     color: grey;
+    width: 50px;
+    height: 50px;
     animation: sij 1s ease 2s infinite alternate;
 }
 @keyframes sij {
