@@ -1,41 +1,42 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: linear-gradient(90deg, rgb(0, 0, 0) 10%, rgb(79, 0, 0) 70%);
+    background:linear-gradient(90deg, rgb(12, 7, 42) 0%, rgb(68, 235, 126) 70%);
 }
 .nav{
-    background: rgb(77, 2, 2);
+    background: rgb(4, 4, 30);
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: sticky;
     top: 0px;
-    border: 8px groove rgb(67, 66, 66);
+    border: 5px groove rgb(30, 231, 73);
     
 }
 .some{
-    background: linear-gradient(90deg, rgb(152, 4, 4) 10%, black 70%);
+    background: linear-gradient(90deg, rgb(11, 9, 44) 10%,  rgb(111, 240, 154) 70%);
     margin-top: 10px;
     box-shadow: 0px 0px 10px rgb(111, 7, 7);
     border-radius: 10px;
     color: white
 }
 .greet{
-    background: grey;
+    background:  linear-gradient(90deg, rgb(90, 218, 117) 10%, rgb(10, 7, 36) 70%);
     margin-top: 10px;
     text-align: center;
     box-shadow: 0px 0px 10px rgb(129, 14, 14);
     border-radius: 10px;
+    color: white;
     
 }
 button{
     color: white;
-    background: linear-gradient(90deg, rgb(152, 4, 4) 10%, black 70%);
+    background: linear-gradient(90deg, rgb(11, 9, 44) 10%,  rgb(111, 240, 154) 70%);
     width: 150px;
     height: 70px;
     border-radius: 40px;
-    border: 2px groove rgb(75, 6, 6);
+    border: 2px groove rgb(19, 199, 6);
     font-size: 20px;
     animation: food 1s ease 2s infinite alternate;
 }
@@ -67,82 +68,82 @@ button{
 }
 
 button:hover{
-    color: black;
-    background: rgb(143, 12, 12);
-    border: 2px groove black;
+    color: rgb(30, 175, 17);
+    background: rgb(255, 255, 255);
+    border: 2px groove rgb(8, 177, 19);
     box-shadow: none;
 }
 .food{
-    background: grey;
+    background: linear-gradient(90deg, rgb(11, 9, 44) 10%,  rgb(111, 240, 154) 70%);
     text-align: center;
     box-shadow: 0px 0px 10px rgb(99, 8, 8);
     border-radius: 10px;
+    color: white;
 }
 .history{
-    background:linear-gradient(90deg, rgb(152, 4, 4) 10%, black 70%);
+    background:linear-gradient(90deg, rgb(68, 235, 126) 10%, rgb(12, 7, 42) 70%);
     margin-top: 10px;
     box-shadow: 0px 0px 10px rgb(117, 4, 4);
     border-radius: 10px;
     color: white;
-    overflow-y: scroll;
 }
 .jk{
     font-size: 10px;
 }
 .copious{
-    background: grey;
+    background:linear-gradient(90deg, rgb(11, 9, 44) 10%,  rgb(111, 240, 154) 70%);
     margin-top: 10px;
     text-align: center;
     box-shadow: 0px 0px 10px rgb(150, 4, 4);
     border-radius: 10px;
 }
 .calculator{
-    background: grey;
+    background:linear-gradient(90deg, rgb(68, 235, 126) 10%, rgb(12, 7, 42) 70%);
     box-shadow: 0px 0px 10px rgb(107, 4, 4);
     border-radius: 10px;
     text-align: center;
     color: white;
 }
 h1{
-    color: black;
+    color: white;
 }
 .nigeria{
-    background: grey;
+    background:linear-gradient(90deg, rgb(11, 9, 44) 10%,  rgb(111, 240, 154) 70%);
     box-shadow: 0px 0px 10px rgb(133, 5, 5);
     border-radius: 10px;
     text-align: center;
     margin-top: 10px;
 }
 .table{
-    background: linear-gradient(90deg, rgb(152, 4, 4) 10%, black 70%);
+    background: linear-gradient(90deg, rgb(95, 235, 114) 10%, rgb(9, 4, 32) 70%);
     box-shadow: 0px 0px 10px rgb(138, 2, 2);
     border-radius: 10px;
     text-align: center;
     margin-top: 10px;
     color: white;
 }
-input[type="number"]{
-    width: 110px;
+input{
+    width: 150px;
     height: 50px;
     color: rgb(255, 255, 255);
-    border: 2px groove rgb(255, 255, 255);
+    border: 2px groove rgb(8, 239, 58);
     border-radius: 40px;
-    background: blue;
+    background: rgb(6, 6, 29);
 }
 table{
-    background: black;
+    background: rgb(8, 8, 30);
     color:white;
-    border: 3px groove rgb(149, 10, 10)
+    border: 3px groove rgb(6, 225, 83)
 }
 .ty:hover{
     background: white;
-    color: blue;
-    border: 3px groove blue;
+    color: rgb(59, 237, 80);
+    border: 3px groove rgb(49, 188, 51);
     box-shadow: none;
 }
 .song{
     border-radius: 100px;
-    background: linear-gradient(90deg, rgb(152, 4, 4) 10%, black 70%);
+    background: linear-gradient(90deg, rgb(11, 9, 44) 10%,  rgb(111, 240, 154) 70%);
     box-shadow: 0px 6px 5px rgb(10, 10, 10);
     border: 3px solid black;
     margin-left: 92%;
@@ -153,15 +154,28 @@ table{
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    color: grey;
+    color: white;
     width: 50px;
     height: 50px;
     animation: sij 1s ease 2s infinite alternate;
+}
+.song:hover{
+    background: white;
+    color: rgb(6, 232, 6);
+    border:3px solid rgb(8, 236, 8);
+}
+.kola{
+    display: flex; flex-direction: row; justify-content: space-around; padding-top: 80px; background-color: rgb(10, 10, 34);
 }
 @media screen and (max-width: 768px) {
     .song{
         margin-top: 150%;
         margin-left: 80%;
+    }
+    .kola{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3px;
     }
 }
 @keyframes sij {

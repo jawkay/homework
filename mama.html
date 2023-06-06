@@ -14,20 +14,20 @@
   <div class="song">
     <a href="" style="color: grey;"><i class="fa fa-angle-up"></i></a>
  </div>
-  <nav id="navbar-example2" class="navbar  px-3 mb-3" style="position: sticky; top: 0px; background: black;">
+  <nav id="navbar-example2" class="navbar  px-3 mb-3" style="position: sticky; top: 0px; background:linear-gradient(90deg, rgb(121, 248, 165) 10%, rgb(12, 7, 42) 70%);">
     <h1 style="color: white;">Assignment Using Function <span class="jk">(James work) </span></h1>
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading1" style="color: grey;">First</a>
+        <a class="nav-link" href="#scrollspyHeading1" style="color: white;">First</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading2" style="color: grey;">Second</a>
+        <a class="nav-link" href="#scrollspyHeading2" style="color:white;">Second</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading3" style="color: grey;">Third</a>
+        <a class="nav-link" href="#scrollspyHeading3" style="color: white;">Third</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading4" style="color: grey;">Fourth</a>
+        <a class="nav-link" href="#scrollspyHeading4" style="color: white;">Fourth</a>
       </li>
     </ul>
 </nav>    
@@ -127,9 +127,12 @@
     <p> <div class="all">
         <div class="calculator">
           <h1>SIMPLE CALCULATOR</h1>
-          <input type="number" placeholder="input a number" id="input1"><span id="symbol"></span>
-          <input type="number" placeholder="input a number" id="input2"> <span id="answer"></span> <br> <br> <br>
-          <button class="ty" onclick="ade()" >+</button> <button class="ty" onclick="sub()">-</button> <button class="ty" onclick="divi()">/</button> <br> <br> <br> <button class="ty" onclick="muti()">X</button>  
+          <input  placeholder="input a number" id="input1"><span id="symbol"></span>
+          <input  placeholder="input a number" id="input2"> <span id="answer"></span> <br> <br> <br>
+          <button class="ty1">+</button>
+           <button class="ty2">-</button> 
+           <button class="ty3">/</button> <br> <br> <br> 
+           <button class="ty4">X</button>  
         </div>
         <div class="copious">
           <b>4. Using copious examples, explain the similarities and <br> differences 
@@ -207,6 +210,30 @@
       </div>
     </div></p>
   </div>
+ <div class="kola">
+  <h1 style="text-align: center; color: white;">My Informations :</h1>
+            <div>
+                <p style="font-size: 12px; color: white;">What we do</p> <br>
+               <p>  <a href="" style="color: white; font-size: 20px; text-decoration: none;">Assignment</a> </p> 
+                 <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Homework</a> </p>
+                 <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;"> ClassWork</a> </p>
+                 <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Learning</a> </p>
+            </div>
+            <div>
+                 <p style="font-size: 12px; color: white;">Who we are</p> <br>
+                 <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Student</a> </p> 
+                 <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Programmers</a> </p> 
+                <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Coders</a> </p> 
+                 <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Learners</a>
+            </div> 
+            <div>
+              <p style="font-size: 12px; color: white;">Contact Us</p> <br>
+              <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">+2349045757597</a> </p> 
+              <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">kayodeolasunkanmi75@gmail.com</a> </p> 
+             <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">james Kayode @facebook</a> </p> 
+              <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">G-squarecommunication@twitter</a>
+         </div> 
+        </div>
       <script>
         function greet(){
           let a= new Date(). getHours();
@@ -251,42 +278,53 @@
         default: alert('wrong');
     };
         };
-       function  ade(){
-        let a=document.getElementById('input1').value;
-        let b=document.getElementById('input2').value;
-        a=+a;
-        b=+b;
-        let k=a+b;
-        let c=document.getElementById('symbol').innerHTML ='+';
-        let d=document.getElementById('answer').innerHTML = `=  ${k}`;
+        function getAnswer(){
+          if(a==""||b==""){
+            d.innerHTML="insert a number"
+            d.style.color='red'
+          }
+          else if (isNaN(a) || isNaN(b)){
+            d.innerHTML="insert a number"
+            d.style.color='red'
+          }
+          else{
+            d.innerHTML= ` = ${k}`;
+            d.style.color="green"
+          }
+        }
+         const ade=function(){
+         a=Number(document.getElementById('input1').value);
+         b=Number(document.getElementById('input2').value);
+         d=document.getElementById('answer');
+         c=document.getElementById('symbol');
+         k=a+b;
+         c.innerHTML= "+";
+         getAnswer()
        };
-       function sub(){
-        let g=document.getElementById('input1').value;
-        let h=document.getElementById('input2').value;
-        g=+g;
-        h=+h;
-        let j=g-h;
-        let s=document.getElementById('symbol').innerHTML="-";
-        let r=document.getElementById('answer').innerHTML=`= ${j}`;
+       const sub = function(){
+        k=a-b;
+        c.innerHTML="-";
+        getAnswer()
        }
-       function divi(){
-        let t=document.getElementById('input1').value;
-        let e=document.getElementById('input2').value;
-        t=+t;
-        e=+e;
-        let u=t/e;
-        let q=document.getElementById('symbol').innerHTML="/";
-        let w=document.getElementById('answer').innerHTML= `= ${u}` 
+       const divi = function(){
+        k=a/b;
+        c.innerHTML='/';
+        getAnswer()
        }
-       function muti(){
-        let y=document.getElementById('input1').value;
-        let v=document.getElementById('input2').value;
-        y=+y;
-        v=+v;
-        let z=y*v;
-        let p=document.getElementById('symbol').innerHTML="X";
-        let o=document.getElementById('answer').innerHTML=`= ${z}`;
+       const muti= function(){
+        k= a*b;
+        c.innerHTML="*";
+        getAnswer()
        }
+       let btn1= document.querySelector(".ty1");
+       let btn2= document.querySelector(".ty2");
+       let btn3= document.querySelector(".ty3");
+       let btn4= document.querySelector(".ty4");
+
+       btn1.addEventListener('click', ade);
+       btn2.addEventListener('click', sub);
+       btn3.addEventListener('click', divi);
+       btn4.addEventListener('click', muti);
      </script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
