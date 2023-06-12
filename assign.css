@@ -137,6 +137,15 @@ input{
     border-radius: 40px;
     background: rgb(6, 6, 29);
 }
+select{
+    width: 150px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    border: 2px groove rgb(8, 239, 58);
+    border-radius: 40px;
+    background: rgb(6, 6, 29);
+}
+
 table{
     background: rgb(8, 8, 30);
     color:white;

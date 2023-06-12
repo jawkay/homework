@@ -129,10 +129,10 @@
           <h1>SIMPLE CALCULATOR</h1>
           <input  placeholder="input a number" id="input1"><span id="symbol"></span>
           <input  placeholder="input a number" id="input2"> <span id="answer"></span> <br> <br> <br>
-          <button class="ty1">+</button>
-           <button class="ty2">-</button> 
-           <button class="ty3">/</button> <br> <br> <br> 
-           <button class="ty4">X</button>  
+          <button class="but" value="add">+</button>
+           <button class="but" value="sub">-</button> 
+           <button class="but" value="divi">/</button> <br> <br> <br> 
+           <button class="but" value="multi">X</button>  
         </div>
         <div class="copious">
           <b>4. Using copious examples, explain the similarities and <br> differences 
@@ -217,13 +217,32 @@
     <button onclick="seyi()">Click Me</button>
   </div>
   <div class="na">
-    <h1>Click the button below to get prime number form (2-70)</h1>
+    <h1>Click the button below to get prime number form (1-70)</h1>
     <p style="text-align: centre;">Using loop</p>
     <span id="prime"></span> <br>
     <button onclick="vibes()"> Click Me</button>
   </div>
 
-
+  <div class="na">
+    <h1>Investment Calculator</h1>
+     <input id="iron" placeholder="input your amount">
+     <select  aria-label="Default select example" id="steel">
+      <option value="1">One Month</option>
+      <option value="2">Two Month</option>
+      <option value="3">Three Month</option>
+      <option value="4">Four Month</option>
+      <option value="5">Five Month</option>
+      <option value="6">Six Month</option>
+      <option value="7">Seven Month</option>
+      <option value="8">Eight Month</option>
+      <option value="9">Nine Month</option>
+      <option value="10">Ten Month</option>
+      <option value="11">Eleven Month</option>
+      <option value="12">Twelve Month</option>
+    </select> <br> <br>
+    <button onclick="cla()">Calculate</button>
+    <p style="font-size: 30px; color: rgb(184, 255, 5);"> The interest rate is 10% per month , so you have <span id="payup" style="color: red;"></span> to pay in the next <span id="mote" style="color:red"></span></p>
+  </div> <br><br>
 
 
  <div class="kola">
@@ -294,54 +313,69 @@
         default: alert('wrong');
     };
         };
+        let w,q;
         function getAnswer(){
-          if(a==""||b==""){
-            d.innerHTML="insert a number"
-            d.style.color='red'
-          }
-          else if (isNaN(a) || isNaN(b)){
-            d.innerHTML="insert a number"
-            d.style.color='red'
-          }
-          else{
-            d.innerHTML= ` = ${k}`;
-            d.style.color="green"
-          }
-        }
-         const ade=function(){
-         a=Number(document.getElementById('input1').value);
-         b=Number(document.getElementById('input2').value);
-         d=document.getElementById('answer');
-         c=document.getElementById('symbol');
-         k=a+b;
-         c.innerHTML= "+";
-         getAnswer()
+            if(w==" " || q==""){
+                ci.innerHTML="insert a number"
+                ci.style.color="red"
+            }
+            else if(isNaN(q) || isNaN(w)){
+                ci.innerHTML =" insert a number"
+                ci.style.color="red"
+            }
+         }
+        let ci= document.getElementById('answer');
+        let p =document.getElementById('symbol');
+         
+        let rt = document.querySelectorAll('.but')
+
+        for(let i =0; i<rt.length; i++){
+
+            rt[i].addEventListener('click', function(){
+
+                getAnswer()
+                let w = Number(document.getElementById('input1').value);
+                let q = Number(document.getElementById('input2').value);
+                if(rt[i].value=='add'){
+                    let ko =w+q
+                    p.innerHTML= "+";
+                    ci.innerHTML= ` = ${ko}`
+                    ci.style.color= 'green';
+
+                }
+                if(rt[i].value=='sub'){
+                    let ko =w-q
+                    p.innerHTML= "-";
+                    ci.innerHTML= ` = ${ko}`
+                    ci.style.color= 'green';
+
+                }
+                if(rt[i].value=='divi'){
+                    let ko =w/q
+                    p.innerHTML= "/";
+                    ci.innerHTML= ` = ${ko}`
+                    ci.style.color= 'green';
+
+                }
+                if(rt[i].value=='multi'){
+                    let ko =w*q
+                    p.innerHTML= "X";
+                    ci.innerHTML= ` = ${ko}`
+                    ci.style.color= 'green';
+
+                }
+            })
+        };
+
+       function cla(){
+      let moneyInvested = Number(document.getElementById('iron').value);
+       let month= Number(document.getElementById('steel').value);
+       let loan = moneyInvested*0.1;
+       let calow= moneyInvested+loan*month;
+       document.getElementById('payup').innerHTML=(`${calow}`)
+       document.getElementById('mote').innerHTML=(`${month} month`)
+         
        };
-       const sub = function(){
-        k=a-b;
-        c.innerHTML="-";
-        getAnswer()
-       }
-       const divi = function(){
-        k=a/b;
-        c.innerHTML='/';
-        getAnswer()
-       }
-       const muti= function(){
-        k= a*b;
-        c.innerHTML="*";
-        getAnswer()
-       }
-       let btn1= document.querySelector(".ty1");
-       let btn2= document.querySelector(".ty2");
-       let btn3= document.querySelector(".ty3");
-       let btn4= document.querySelector(".ty4");
-
-       btn1.addEventListener('click', ade);
-       btn2.addEventListener('click', sub);
-       btn3.addEventListener('click', divi);
-       btn4.addEventListener('click', muti);
-
 
 
       function seyi(){
@@ -362,8 +396,28 @@
         )
        }
        function vibes(){
-        document.querySelector('#prime').innerText = (` Sir i don't know it, my brain have explode, i have reason it too much`)
+        let n;
+      n= prompt('enter a number from 1 to 70');
+        if(!n || n<1 || n>70) {
+        alert(`enter a number from 1 to 70`)
+        }
+        else if (n==2){
+            alert(`the number is a prime number`)
+        }
+        else{
+            let i;
+            for(i =2; i<n; i++){
+                if(n%i==0){
+                    alert(`you are wrong, ${n} is not a prime number`);
+                    break;
+                }
+            }   
+             if(n==i){
+                    alert(`this is a prime number`)
+                }
+        }
        }
+       
      </script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
