@@ -43,7 +43,7 @@
       </li>
     </ul>
 </nav>    
-  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"      data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0"></div>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2"       data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0"></div>
     
   <h2 id="scrollspyHeading1" style="color: rgb(234, 200, 9); text-shadow: 2px 2px 5px black;">First</h2>
   <p> <div class="all">
@@ -284,7 +284,7 @@
     <p style="font-size: 30px; color: rgb(255, 234, 5); text-shadow: 5px 5px 10px black;"> Your monthly repayment will be <span id="fre" style="color: rgb(0, 157, 255); font-size: 20px;">0</span> with <span id="frt"  style="color: rgb(0, 157, 255); font-size: 20px;">0</span> scheduled number of payments The total repayment on this funding will be <span id="fry"  style="color: rgb(0, 157, 255); font-size: 20px;">0</span></p>
   </div> <br><br>
 
-<div class="na">
+<div class="ap">
   <h1 style="color: rgb(255, 234, 5); text-shadow: 5px 5px 10px black;">GUESS MY NUMBER GAME</h1>
         <h2 class="message">Start Guessing......</h2>
         <input class="mynumber" placeholder="Guess a number btw 1 and 20" style="width: 400px; padding: 5px; font-size: 24px; text-align: center;
@@ -481,45 +481,84 @@
         document.querySelector(`#fry`).innerHTML = `${TotalAmount} naria`;
        }
        function cha(){
-    let ampaino =document.querySelector(`#lom`).value;
-    show.innerHTML=`${ampaino}`
+        let MarkUpPercentAge = Number(document.querySelector(`#lom`).value);
+        let show = document.querySelector(`#mercy`)
+        show.innerHTML=`${MarkUpPercentAge}`
     }
 
 
     const secretNumber = Math.trunc(Math.random()*20)+1;
     const find = document.querySelector(`.check`);
-
+  
     let theNumber = document.querySelector('.number');
-    let thebody = document.querySelector(`.na`);
+    let thebody = document.querySelector(`.ap`);
     let myMessage= document.querySelector(`.message`);
+    let score = 20;
+    const gohigh= document.querySelector(`.highestscore`);
+
+    function scoreLine(){
+      score = score-4;
+      if(score==0){
+        myMessage.innerHTML=`Game Over`;
+        find.innerHTML=`Game Over`;
+        find.style.color=`red`;
+        find.style.background=`white`;
+        find.disabled=`disabled`
+        document.querySelector(`.mynumber`).value ="Please refresh the page";
+        thebody.style.backgroundColor=`red`;
+        theNumber.innerHTML=`The number is ${secretNumber}`;
+      }
+
+    }
+
+    let kolo = gohigh.innerHTML=`Highest Score: 8`;
+         if(score>kolo){
+           gohigh.innerHTML=` Highest Score: ${kolo}`
+         }
+         else{
+          gohigh.innerHTML=` Highest Score: ${score}`
+         }
+
     let myEngine = function(){
       let myGues = Number(document.querySelector(`.mynumber`).value);
       if(!myGues || myGues <1 || myGues>20){
         myMessage.innerHTML=`you must put a valid number between 1 and 20`;
         myMessage.style.color= `red`;
         document.querySelector(`.mynumber`).value ="";
+        scoreLine()
+        
       }
       else if (myGues<secretNumber){
         myMessage.innerHTML= `your guess is low`;
         myMessage.style.color="lightblue";
         document.querySelector(`.mynumber`).value ="";
+        scoreLine()
       }
       else if (myGues>secretNumber){
         myMessage.innerHTML= `your guess is too high`;
         myMessage.style.color="lightblue";
         document.querySelector(`.mynumber`).value ="";
+        scoreLine()
       }
       else if (myGues==secretNumber){
-        myMessage.innerHTML='Game Over';
+        myMessage.innerHTML='Correct';
         myMessage.style.color='white';
         thebody.style.background = `green`;
         thebody.style.color = `white`;
         theNumber.innerHTML=`The number is ${secretNumber} Correct`;
         theNumber.style.color=`white`;
         document.querySelector(`.mynumber`).value ="";
+        find.innerHTML=` <h4> Score: ${score} </h4>`;
+        find.style.color=`green`;
+        find.style.background=`white`;
+        find.disabled=`disabled`
+        document.querySelector(`.mynumber`).value ="Please refresh the page";
+        scoreLine();
       }
     }
-    console.log(secretNumber)
+
+
+    console.log(secretNumber);
     find.addEventListener('click', myEngine)
 
      </script>

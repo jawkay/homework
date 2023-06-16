@@ -106,6 +106,14 @@ button:hover{
     border-radius: 10px;
     color: white;
 }
+.ap{
+    background: rgb(11, 11, 33);
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgb(210, 210, 210);
+    border-radius: 10px;
+    color: white;
+}
 .label{
     font-size: 20px;
     color: gold;
