@@ -205,6 +205,13 @@ table{
 .kola{
     display: flex; flex-direction: row; justify-content: space-around; padding-top: 80px; background-color: rgb(10, 10, 34);
 }
+.then{
+    background:  rgb(10, 10, 34);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
 @media screen and (max-width: 768px) {
     .song{
         margin-top: 150%;
@@ -250,6 +257,12 @@ table{
     100%{
         box-shadow: inset0px 0px 10px rgb(141, 109, 2);
     }
-}    
+} 
+#end{
+    display: none;
+}  
+.receipt{
+    display: none;
+} 
 
 

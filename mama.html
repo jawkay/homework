@@ -316,7 +316,75 @@
     <button class="reload" onclick="king()" style="margin-left: 45%;">Restart</button>
     <h1 style="text-align: center;">Highest Score: <span class="highestscore">0</span></h1>
 
-  </div> <br> <br> <br>
+  </div> <br>
+  <div class="na">
+    <h1 id="" style="color: rgb(255, 234, 5); text-shadow: 5px 5px 10px black; text-align: center;">Digital Time</h1>
+    <br>
+    <h1 onload="xma()" id="tund" style="color: rgb(255, 234, 5); text-shadow: 5px 5px 10px black; text-align: center;">
+    </h1>
+  </div>
+
+  <div class="na">
+    <h1 id="oro" style="color: rgb(5, 230, 255); text-shadow: 5px 5px 10px black; text-align: center;">COUNTDOWN TO
+      NEWYEAR</h1>
+    <br>
+    <h1 onload="ma()" id="tunde"
+      style="color: rgb(255, 255, 255); text-shadow: 5px 5px 10px black; text-align: center;"></h1>
+  </div>
+
+
+  <div class="then">
+    <div style="text-align: center;">
+      <h1 class="counter">
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+      </h1> <br>
+
+      <button id="start" style="background:green;">Start Trip</button>
+      <button id="end" style="background:orange">End Trip</button>
+    </div>
+    <div>
+      <table border="2" cellpadding="7" class="receipt">
+        <tr>
+          <th colspan="2" style="color: green;">Receipt</th>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Price</td>
+        </tr>
+
+        <tr>
+          <td>Base fare</td>
+          <td style="color: green">#800</td>
+        </tr>
+        <tr>
+          <td>Time Fare</td>
+          <td class="bucks" style="color: green;"></td>
+        </tr>
+        <tr>
+          <td>Gross Total</td>
+          <td class="toti" style="color: green;"></td>
+        </tr>
+        <tr>
+          <td>VAT(5%)</td>
+          <td class="pect" style="color: red;"></td>
+        </tr>
+        <tr>
+          <td>Payable</td>
+          <td class="lot" style="color: green;"></td>
+        </tr>
+
+
+      </table>
+    </div>
+
+  </div>
+
+
+
+
+
 
 
   <div class="kola">
@@ -344,6 +412,67 @@
     </div>
   </div>
   <script>
+    let ago = document.querySelector(`#min`);
+    let cago = document.querySelector(`#sec`);
+    let startbtn = document.getElementById('start');
+    let endbtn = document.getElementById('end');
+    let fare = document.querySelector(`.bucks`);
+    let gross = document.querySelector(`.toti`);
+    let pay = document.querySelector(`.lot`);
+    let pa = document.querySelector(`.pect`);
+    let rec = document.querySelector(`.receipt`);
+    let sek = 0;
+    let k;
+
+    function work() {
+      ++sek;
+      let mes =  Number(parseInt(sek / 60));
+      let sis = sek % 60;
+
+      mes = (mes < 10) ? "0" + mes : mes;
+      sis = (sis < 10) ? "0" + sis : sis;
+
+     ago.innerHTML = mes;
+      cago.innerHTML = sis;
+      let read = 50*mes;
+      fare.innerHTML=read;
+      let ross = read + 800;
+      gross.innerHTML=ross;
+      let pec = 5/100*ross;
+      pa.innerHTML=pec;
+      pay.innerHTML=pec+ross;
+    }
+    function Count() {
+      k = setInterval(work, 1000);
+    }
+
+    function startCount() {
+      Count();
+      sek = 0
+      cago.innerHTML = 0 + '0',
+      ago.innerHTML = 0 + '0',
+      startbtn.style.display = 'none';
+      endbtn.style.display = `block`;
+      rec.style.display=`none`
+      
+    }
+    function endCount() {
+      clearInterval(k);
+      startbtn.style.display = `block`;
+      endbtn.style.display = `none`;
+      rec.style.display=`block`
+    }
+
+    startbtn.addEventListener('click', startCount);
+    endbtn.addEventListener('click', endCount);
+
+
+
+
+
+
+
+
     function greet() {
       let a = new Date().getHours();
       if (a > 0 && a < 11) {
@@ -504,13 +633,13 @@
       document.querySelector(`#fry`).innerHTML = `${TotalAmount} naria`;
     }
     function cha() {
-      let MarkUpPercentAge =document.querySelector(`#lom`).value;
+      let MarkUpPercentAge = document.querySelector(`#lom`).value;
       let show = document.querySelector(`#mercy`)
       show.innerHTML = `${MarkUpPercentAge}`
     }
 
     let gohigh = document.querySelector(`.highestscore`).innerHTML;
-     secretNumber = Math.trunc(Math.random() * 20) + 1;
+    secretNumber = Math.trunc(Math.random() * 20) + 1;
     let find = document.querySelector(`.check`);
 
     let theNumber = document.querySelector('.number');
@@ -523,7 +652,7 @@
       score = score - 4;
       if (score == 0) {
         myMessage.innerHTML = `Game Over`;
-        myMessage.style.color=`white`
+        myMessage.style.color = `white`
         find.innerHTML = `Game Over`;
         find.style.color = `red`;
         find.style.background = `white`;
@@ -577,16 +706,16 @@
         restart.style.background = `white`;
         restart.style.color = `green`;
         document.querySelector(`.mynumber`).value = "Please restart";
-        if(gohigh<score){
-          document.querySelector(`.highestscore`).innerHTML=`${score}`
+        if (gohigh < score) {
+          document.querySelector(`.highestscore`).innerHTML = `${score}`
         }
-        else{
-          document.querySelector(`.highestscore`).innerHTML=`${gohigh}`
+        else {
+          document.querySelector(`.highestscore`).innerHTML = `${gohigh}`
         }
-        
+
+      }
+
     }
-  
-  }
     console.log(secretNumber);
     find.addEventListener('click', myEngine);
 
@@ -607,7 +736,7 @@
       secretNumber = Math.trunc(Math.random() * 20) + 1;
       console.log(secretNumber);
 
-  
+
 
 
 
@@ -616,6 +745,52 @@
 
 
     }
+    function xma() {
+      let d = new Date()
+      let Months = [`january`, `feburary`, `march`, `april`, `may`, `june`, `july`, `august`, `septmber`, `october`, `november`, `december`];
+      let ho = d.getHours();
+      let mi = d.getMinutes();
+      let sec = d.getSeconds();
+      let da = d.getDate();
+      if (ho < 10) {
+        ho = `0` + ho;
+      }
+      if (da < 10) {
+        da = `0` + da;
+      }
+      if (mi < 10) {
+        mi = `0` + mi;
+      }
+      if (sec < 10) {
+        sec = `0` + sec;
+      }
+      let ab = document.querySelector(`#tund`).innerHTML = `${Months[d.getMonth()]} 
+      ${da}, ${ho} : ${mi} : ${sec}`;
+    }
+    xma()
+    setInterval(xma, 1000)
+
+
+    let countdown = new Date(`december 25 2023 00:00:00`).getTime();
+    function ma() {
+      let now = new Date().getTime();
+      let distance = countdown - now;
+      let days = Math.floor(distance / (24 * 60 * 60 * 1000));
+      let hours = Math.floor(distance % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+      let minutes = Math.floor(distance % (60 * 60 * 1000) / (60 * 1000));
+      let seconds = Math.floor(distance % (60 * 1000) / (1000));
+      if (days == 0) {
+        clearInterval(remi);
+        document.querySelector(`#oro`).innerHTML = `HAPPY NEW YEAR`;
+        document.querySelector(`body`).style.backgroundColor = `green`
+      }
+      document.querySelector(`#tunde`).innerHTML = `${days}Days : ${hours}Hrs : ${minutes}Min : ${seconds}Sec`
+    }
+    xma()
+    let remi = setInterval(ma, 1000)
+
+
+
 
 
   </script>
