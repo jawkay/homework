@@ -380,6 +380,63 @@
     </div>
 
   </div>
+  <div class="na">
+    <h1>Set Task</h1>
+
+    <input type="text" id="collect" width="15%"> <button id="subin"
+    style="background-color: rgb(46, 102, 5); height: 40px; color: white; cursor: pointer; width: 8%;">+ ADD</button>
+  <br>
+  <br>
+  <table border="3" cellpadding="10" width="60%" style="margin-left: 50px;">
+    <tr>
+      <td>Task</td>
+      <td>Time</td>
+      <td>Until</td>
+      <td>Action</td>
+    </tr>
+    <tr id="track">
+      <td id="task"></td>
+      <td id="time"></td>
+      <td id="until"> <span id="flog"></span> <span id="song"></span></td>
+      <td>
+        <table border="2" cellpadding="2" width="100%">
+          <tr>
+            <td onclick="edit()">Edit</td>
+            <td onclick="mark()">Mark</td>
+            <td onclick="dele()">Delete</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  </table> <br> <br> <br>
+
+    <h1>Select your subject</h1>
+<div style="display: flex; flex-direction: row; justify-content: space-around;">
+  <div>
+    <p>Subjects</p>
+    <ul>
+      <li id="eng"><span><input type="checkbox" onclick="popi()"></span>English</li>
+      <li id="mat"><span><input type="checkbox" onclick="pop()"></span>Mathematics</li>
+      <li id="comp"><span><input type="checkbox" onclick="poi()"></span>Computer</li>
+      <li id="civ"><span><input type="checkbox" onclick="ppi()"></span>Civic</li>
+      <li id="phy"><span><input type="checkbox" onclick="opi()"></span>Physics</li>
+      <li id="chem"><span><input type="checkbox" onclick="pi()"></span>Chemistry</li>
+      <li id="bio"><span><input type="checkbox" onclick="po()"></span>Biology</li>
+    </ul>
+  </div>
+  <div class="vr">
+
+  </div>
+  <div>
+    <p>Selected subject(click the mark to remove)</p>
+     <ul id="dou">
+       
+     </ul>
+  </div>
+</div>
+
+  </div> <br>
 
 
 
@@ -790,6 +847,239 @@
     let remi = setInterval(ma, 1000)
 
 
+    let jayz = document.getElementById(`collect`).value;
+let ty = 0;
+function addMe() {
+    let diago = document.getElementById('flog');
+    let cafe = document.getElementById(`song`);
+    jayz = document.getElementById(`collect`).value;
+    let tas = document.getElementById(`task`);
+    let tim = document.getElementById(`time`);
+    let ty = 0;
+
+    tas.innerHTML = jayz;
+
+    let d = new Date()
+    let ho = d.getHours();
+    let mi = d.getMinutes();
+    ho = (ho < 10) ? "0" + ho : ho;
+    min = (min < 10) ? "0" + min : min;
+
+    tim.innerHTML = ` ${ho} : ${mi}`;
+
+    function frame() {
+        ++ty;
+        let mm = parseInt(ty / 60);
+        let ss = ty % 60;
+
+        mm = (mm < 10) ? "0" + mm : mm;
+        ss = (ss < 10) ? "0" + ss : ss;
+
+        diago.innerHTML = `${mm} :`;
+        cafe.innerHTML = ss;
+        if (mm == 1) {
+            clearInterval(un);
+            document.getElementById(`until`).innerHTML = `Expired`
+        }
+    }
+
+    let un = setInterval(frame, 1000);
+    document.getElementById('collect').value = " ";
+    document.getElementById('collect').focus()
+}
+function edit() {
+    document.getElementById(`task`).innerHTML = " "
+    document.getElementById(`time`).innerHTML = " ";
+    document.getElementById(`flog`).innerHTML = " 00 ";
+    document.getElementById(`song`).innerHTML = " ";
+    document.getElementById('collect').focus();
+    document.getElementById(`collect`).value = jayz;
+
+
+
+
+}
+function dele() {
+    document.getElementById(`task`).innerHTML = " "
+    document.getElementById(`time`).innerHTML = " "
+    document.getElementById(`until`).innerHTML = " "
+    document.getElementById(`collect`).innerHTML = " "
+}
+function mark() {
+    document.getElementById(`until`).innerHTML = `00 : 00`;
+    document.getElementById(`time`).innerHTML = "00 : 00 ";
+    document.getElementById(`task`).style.textDecoration = `line-through`;
+
+}
+let colsw = document.getElementById(`subin`);
+colsw.addEventListener(`click`, addMe)
+
+
+
+function popi() {
+    let seyi = document.createElement(`li`);
+    let english = document.getElementById(`eng`);
+    let foi = document.createTextNode(`English`);
+    let sag = document.getElementById(`dou`);
+    seyi.appendChild(foi);
+    sag.appendChild(seyi);
+
+    english.style.display = `none`
+    let shope = document.createElement(`span`);
+    let sock = document.createTextNode(`\u2714`);
+    shope.appendChild(sock);
+    seyi.appendChild(shope);
+    shope.id = `tune`;
+    shope.style.cursor = `pointer`
+    let cra = document.getElementById(`tune`);
+    cra.onclick = function () {
+        this.parentNode.style.display = `none `;
+        english.style.display = `block`
+    }
+
+
+}
+function pop() {
+    let seyi = document.createElement(`li`);
+    let englis = document.getElementById(`mat`);
+    let foi = document.createTextNode(`Mathematics`);
+    let sag = document.getElementById(`dou`);
+    seyi.appendChild(foi);
+    sag.appendChild(seyi);
+
+    englis.style.display = `none`
+    let shope = document.createElement(`span`);
+    let sock = document.createTextNode(`\u2714`);
+    shope.appendChild(sock);
+    seyi.appendChild(shope);
+    shope.id = `tun`;
+    shope.style.cursor = `pointer`
+    let cra = document.getElementById(`tun`);
+    cra.onclick = function () {
+        this.parentNode.style.display = `none `;
+        englis.style.display = `block`
+    }
+
+
+}
+function poi() {
+    let seyi = document.createElement(`li`);
+    let english = document.getElementById(`comp`);
+    let foi = document.createTextNode(`Computer`);
+    let sag = document.getElementById(`dou`);
+    seyi.appendChild(foi);
+    sag.appendChild(seyi);
+
+    english.style.display = `none`;
+    let shope = document.createElement(`span`);
+    let sock = document.createTextNode(`\u2714`);
+    shope.appendChild(sock);
+    seyi.appendChild(shope);
+    shope.id = `un`;
+    shope.style.cursor = `pointer`
+    let cra = document.getElementById(`un`);
+    let i = 0;
+    cra.onclick = function () {
+        this.parentNode.style.display = `none `;
+        english.style.display = `block`
+    }
+
+
+}
+function ppi() {
+    let seyi = document.createElement(`li`);
+    let englsh = document.getElementById(`civ`);
+    let foi = document.createTextNode(`Civic`);
+    let sag = document.getElementById(`dou`);
+    seyi.appendChild(foi);
+    sag.appendChild(seyi);
+
+    englsh.style.display = `none`
+    let shope = document.createElement(`span`);
+    let sock = document.createTextNode(`\u2714`);
+    shope.appendChild(sock);
+    seyi.appendChild(shope);
+    shope.id = `ne`;
+    shope.style.cursor = `pointer`
+    let cra = document.getElementById(`ne`);
+    let i = 0;
+    cra.onclick = function () {
+        this.parentNode.style.display = `none `;
+        englsh.style.display = `block`
+    }
+
+
+}
+function opi() {
+    let seyi = document.createElement(`li`);
+    let enlish = document.getElementById(`phy`);
+    let foi = document.createTextNode(`Physics`);
+    let sag = document.getElementById(`dou`);
+    seyi.appendChild(foi);
+    sag.appendChild(seyi);
+
+    enlish.style.display = `none`
+    let shope = document.createElement(`span`);
+    let sock = document.createTextNode(`\u2714`);
+    shope.appendChild(sock);
+    seyi.appendChild(shope);
+    shope.id = `une`;
+    shope.style.cursor = `pointer`
+    let cra = document.getElementById(`une`);
+    let i = 0;
+    cra.onclick = function () {
+        this.parentNode.style.display = `none `;
+        enlish.style.display = `block`
+    }
+
+
+}
+function pi() {
+    let seyi = document.createElement(`li`);
+    let nglish = document.getElementById(`chem`);
+    let foi = document.createTextNode(`Chemistry`);
+    let sag = document.getElementById(`dou`);
+    seyi.appendChild(foi);
+    sag.appendChild(seyi);
+
+    nglish.style.display = `none`
+    let shope = document.createElement(`span`);
+    let sock = document.createTextNode(`\u2714`);
+    shope.appendChild(sock);
+    seyi.appendChild(shope);
+    shope.id = `tne`;
+    shope.style.cursor = `pointer`
+    let cra = document.getElementById(`tne`);
+    cra.onclick = function () {
+        this.parentNode.style.display = `none `;
+        nglish.style.display = `block`
+    }
+
+
+}
+function po() {
+    let seyi = document.createElement(`li`);
+    let engli = document.getElementById(`bio`);
+    let foi = document.createTextNode(`Biology`);
+    let sag = document.getElementById(`dou`);
+    seyi.appendChild(foi);
+    sag.appendChild(seyi);
+
+    engli.style.display = `none`
+    let shope = document.createElement(`span`);
+    let sock = document.createTextNode(`\u2714`);
+    shope.appendChild(sock);
+    seyi.appendChild(shope);
+    shope.id = `tue`;
+    shope.style.cursor = `pointer`
+    let cra = document.getElementById(`tue`);
+    cra.onclick = function () {
+        this.parentNode.style.display = `none `;
+        engli.style.display = `block`
+    }
+
+
+}
 
 
 
