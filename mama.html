@@ -383,482 +383,113 @@
   <div class="na">
     <h1>Set Task</h1>
 
-    <input type="text" id="collect" width="15%"> <button id="subin"
-    style="background-color: rgb(46, 102, 5); height: 40px; color: white; cursor: pointer; width: 8%;">+ ADD</button>
+    <input type="text" id="collect" placeholder="Task here"> <button id="subin"
+    style="background-color: rgb(46, 102, 5); height: 40px; color: white; cursor: pointer; width: 5%;">+ ADD</button>
+  <input type="number" id="secon" placeholder="Minutes Here">
   <br>
   <br>
-  <table border="3" cellpadding="10" width="60%" style="margin-left: 50px;">
-    <tr>
-      <td>Task</td>
-      <td>Time</td>
-      <td>Until</td>
-      <td>Action</td>
-    </tr>
-    <tr id="track">
-      <td id="task"></td>
-      <td id="time"></td>
-      <td id="until"> <span id="flog"></span> <span id="song"></span></td>
-      <td>
-        <table border="2" cellpadding="2" width="100%">
-          <tr>
-            <td onclick="edit()">Edit</td>
-            <td onclick="mark()">Mark</td>
-            <td onclick="dele()">Delete</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
+  <table id="badsin" border="3" cellpadding="10" width="60%">
+    <thead>
+      <tr>
+        <td>Task</td>
+        <td>Time</td>
+        <td>Action</td>
+        <td>Until</td>
+      </tr>
+    </thead>
+     <tbody id="goodsin">
+
+     </tbody>
 
   </table> <br> <br> <br>
 
     <h1>Select your subject</h1>
-    <p> NOTE: <span><i>you can only make correction once</i> </span></p>
-<div style="display: flex; flex-direction: row; justify-content: space-around;">
-  <div>
-    <p>Subjects</p>
-    <ul>
-      <li id="eng"><span><input type="checkbox" onclick="popi()"></span>English</li>
-      <li id="mat"><span><input type="checkbox" onclick="pop()"></span>Mathematics</li>
-      <li id="comp"><span><input type="checkbox" onclick="poi()"></span>Computer</li>
-      <li id="civ"><span><input type="checkbox" onclick="ppi()"></span>Civic</li>
-      <li id="phy"><span><input type="checkbox" onclick="opi()"></span>Physics</li>
-      <li id="chem"><span><input type="checkbox" onclick="pi()"></span>Chemistry</li>
-      <li id="bio"><span><input type="checkbox" onclick="po()"></span>Biology</li>
-    </ul>
-  </div>
-  <div class="vr">
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+      <div>
+        <table id="ourownsubject">
+          <h3>Available Subjects</h3>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Select</th>
+            </tr>
+          </thead>
+          <tbody id="ourownbody"></tbody>
+        </table>
+      </div>
+      <div>
+        <table id="yourownsubject" cellpadding="10">
+          <h3>Selected Subjects</h3>
+          <thead>
+            <tr>
+              <th>Selected</th>
+              <th>Delect</th>
+            </tr>
+          </thead>
+          <tbody id="yourownbody"></tbody>
+        </table>
+      </div>
 
-  </div>
-  <div>
-    <p>Selected subject(click the mark to remove)</p>
-     <ul id="dou">
-       
-     </ul>
-  </div>
-</div>
+    </div> <br>
+    <div class="na" style="height: 300px;">
+      <h1 style="color: rgb(5, 230, 255); text-shadow: 5px 5px 10px black; text-align: center;">Simple Add and Delete
+        Machine</h1>
+      <div style="border: 1px solid rgb(4, 205, 4); background: rgb(255, 115, 0); width: 50%;
+    color: rgb(255, 255, 255); padding: 10px 0px 40px 100px; margin: 0px auto; margin-bottom: 30px;">
+        <input type="text" id="input">
+        <button onclick="taiwo()"
+          style="background-color: rgb(46, 102, 5); height: 40px; color: white; cursor: pointer; width: 20%;">+
+          Add</button>
+        <ul id="myown">
 
-  </div> <br>
+        </ul>
+      </div>
+    </div> <br> <br>
 
 
 
 
 
 
-
-  <div class="kola">
-    <h1 style="text-align: center; color: white;">My Informations :</h1>
-    <div>
-      <p style="font-size: 12px; color: white;">What we do</p> <br>
-      <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Assignment</a> </p>
-      <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Homework</a> </p>
-      <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;"> ClassWork</a> </p>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Learning</a> </p>
+    <div class="kola">
+      <h1 style="text-align: center; color: white;">My Informations :</h1>
+      <div>
+        <p style="font-size: 12px; color: white;">What we do</p> <br>
+        <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Assignment</a> </p>
+        <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Homework</a> </p>
+        <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;"> ClassWork</a> </p>
+        <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Learning</a> </p>
+      </div>
+      <div>
+        <p style="font-size: 12px; color: white;">Who we are</p> <br>
+        <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Student</a> </p>
+        <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Programmers</a> </p>
+        <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Coders</a> </p>
+        <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Learners</a>
+      </div>
+      <div>
+        <p style="font-size: 12px; color: white;">Contact Us</p> <br>
+        <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">+2349045757597</a> </p>
+        <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">kayodeolasunkanmi75@gmail.com</a>
+        </p>
+        <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">james Kayode @facebook</a> </p>
+        <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">G-squarecommunication@twitter</a>
+      </div>
     </div>
-    <div>
-      <p style="font-size: 12px; color: white;">Who we are</p> <br>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Student</a> </p>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Programmers</a> </p>
-      <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Coders</a> </p>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Learners</a>
-    </div>
-    <div>
-      <p style="font-size: 12px; color: white;">Contact Us</p> <br>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">+2349045757597</a> </p>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">kayodeolasunkanmi75@gmail.com</a> </p>
-      <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">james Kayode @facebook</a> </p>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">G-squarecommunication@twitter</a>
-    </div>
-  </div>
-  <script>
-    let ago = document.querySelector(`#min`);
-    let cago = document.querySelector(`#sec`);
-    let startbtn = document.getElementById('start');
-    let endbtn = document.getElementById('end');
-    let fare = document.querySelector(`.bucks`);
-    let gross = document.querySelector(`.toti`);
-    let pay = document.querySelector(`.lot`);
-    let pa = document.querySelector(`.pect`);
-    let rec = document.querySelector(`.receipt`);
-    let sek = 0;
-    let k;
+    <script>
 
-    function work() {
-      ++sek;
-      let mes =  Number(parseInt(sek / 60));
-      let sis = sek % 60;
-
-      mes = (mes < 10) ? "0" + mes : mes;
-      sis = (sis < 10) ? "0" + sis : sis;
-
-     ago.innerHTML = mes;
-      cago.innerHTML = sis;
-      let read = 50*mes;
-      fare.innerHTML=read;
-      let ross = read + 800;
-      gross.innerHTML=ross;
-      let pec = 5/100*ross;
-      pa.innerHTML=pec;
-      pay.innerHTML=pec+ross;
-    }
-    function Count() {
-      k = setInterval(work, 1000);
-    }
-
-    function startCount() {
-      Count();
-      sek = 0
-      cago.innerHTML = 0 + '0',
-      ago.innerHTML = 0 + '0',
-      startbtn.style.display = 'none';
-      endbtn.style.display = `block`;
-      rec.style.display=`none`
-      
-    }
-    function endCount() {
-      clearInterval(k);
-      startbtn.style.display = `block`;
-      endbtn.style.display = `none`;
-      rec.style.display=`block`
-    }
-
-    startbtn.addEventListener('click', startCount);
-    endbtn.addEventListener('click', endCount);
+function addme() {
+    let coll = document.getElementById(`collect`).value;
+    let anno = document.getElementById(`goodsin`);
+    let kill = document.createElement(`td`);
+    let vibe = document.createElement(`tr`);
+    let nau = document.createTextNode(coll);
+    kill.appendChild(nau);
+    vibe.appendChild(kill);
+    anno.appendChild(vibe);
 
 
 
-
-
-
-
-
-    function greet() {
-      let a = new Date().getHours();
-      if (a > 0 && a < 11) {
-        alert('Good Morning')
-      }
-      else if (a > 11 && a < 16) {
-        alert('Good afternoon')
-      }
-      else {
-        alert('Good Evening')
-      };
-    };
-    function seun() {
-      let resturant = {
-        name: 'chicken Republic',
-        categories: ['aficandish', 'chinesedish', 'calarbadish', 'indiadish', 'drink', 'soup', 'meat',],
-        drink: ['chivita', 'chiexotic', 'cocoa', 'fanta', '7up', 'evabottlewater',],
-        soup: ['egusi', 'ewedu', 'stew', 'ogbono', 'okoro',],
-        swallow: ['amala', 'semovita', 'akpu', 'fufu', 'eba',],
-        owner: 'mr okoro',
-        location: 'bodija',
-      };
-      alert(`i want ${resturant.categories[5]} ${resturant.soup[0]} and ${resturant.swallow[4]} i also want ${resturant.drink[3]}, thanks`);
-    };
-    function james() {
-      let age = prompt('what is Nigerian age ?');
-      let d = +age;
-      switch (d) {
-        case 50: alert('not close');
-          break;
-        case 59: alert('close');
-          break;
-        case 60: alert(' almost correct');
-          break;
-        case 63: alert('correct');
-          break;
-        case 64: alert('close');
-          break;
-        case 65: alert('close');
-          break;
-        default: alert('wrong');
-      };
-    };
-    let w, q;
-    function getAnswer() {
-      if (w == " " || q == "") {
-        ci.innerHTML = "insert a number"
-        ci.style.color = "red"
-      }
-      else if (isNaN(q) || isNaN(w)) {
-        ci.innerHTML = " insert a number"
-        ci.style.color = "red"
-      }
-    }
-    let ci = document.getElementById('answer');
-    let p = document.getElementById('symbol');
-
-    let rt = document.querySelectorAll('.but')
-
-    for (let i = 0; i < rt.length; i++) {
-
-      rt[i].addEventListener('click', function () {
-
-        getAnswer()
-        let w = Number(document.getElementById('input1').value);
-        let q = Number(document.getElementById('input2').value);
-        if (rt[i].value == 'add') {
-          let ko = w + q
-          p.innerHTML = "+";
-          ci.innerHTML = ` = ${ko}`
-          ci.style.color = 'green';
-
-        }
-        if (rt[i].value == 'sub') {
-          let ko = w - q
-          p.innerHTML = "-";
-          ci.innerHTML = ` = ${ko}`
-          ci.style.color = 'green';
-
-        }
-        if (rt[i].value == 'divi') {
-          let ko = w / q
-          p.innerHTML = "/";
-          ci.innerHTML = ` = ${ko}`
-          ci.style.color = 'green';
-
-        }
-        if (rt[i].value == 'multi') {
-          let ko = w * q
-          p.innerHTML = "X";
-          ci.innerHTML = ` = ${ko}`
-          ci.style.color = 'green';
-
-        }
-      })
-    };
-
-    function cla() {
-      let moneyInvested = Number(document.getElementById('iron').value);
-      let month = Number(document.getElementById('steel').value);
-      let loan = moneyInvested * 0.1;
-      let calow = moneyInvested + loan * month;
-      document.getElementById('payup').innerHTML = (`${calow}`)
-      document.getElementById('mote').innerHTML = (`${month} month`)
-
-    };
-
-
-    function seyi() {
-      let ser = document.querySelector('#winner')
-      let oneday = new Date().getDay()
-      let days = ['Sunday', 'Monday', "Tuesday", 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-      if (oneday == 0) {
-        ser.innerHTML = (` <h2>Today is ${days[oneday]} go to church </h2>`)
-      }
-      else if (oneday == 5) {
-        ser.innerHTML = (` <h2>Today is ${days[oneday]} go to mosque </h2>`)
-      }
-      else if (oneday == 6) {
-        ser.innerHTML = (` <h2>Today is ${days[oneday]} go to party </h2>`)
-      }
-      else (
-        ser.innerHTML = (` <h2>Today is ${days[oneday]} go to work</h2>`)
-      )
-    }
-    function vibes() {
-      let n;
-      n = prompt('enter a number from 1 to 70');
-      if (!n || n < 1 || n > 70) {
-        alert(`enter a number from 1 to 70`)
-      }
-      else if (n == 2) {
-        alert(`the number is a prime number`)
-      }
-      else {
-        let i;
-        for (i = 2; i < n; i++) {
-          if (n % i == 0) {
-            alert(`you are wrong, ${n} is not a prime number`);
-            break;
-          }
-        }
-        if (n == i) {
-          alert(`this is a prime number`)
-        }
-      }
-    }
-    function opeyemi() {
-      let firstMoney = Number(document.querySelector(`#lon`).value);
-      let MarkUpPercentAge = Number(document.querySelector(`#lom`).value);
-      let MonthsYear = Number(document.querySelector(`#stee`).value);
-      let Percentage = MarkUpPercentAge / 100;
-      let TotalAmount = firstMoney * Percentage + firstMoney;
-      let jk = MonthsYear;
-      let Inter = TotalAmount / MonthsYear;
-      document.querySelector(`#fre`).innerHTML = `${Inter} naria`;
-      document.querySelector(`#frt`).innerHTML = `${jk}`;
-      document.querySelector(`#fry`).innerHTML = `${TotalAmount} naria`;
-    }
-    function cha() {
-      let MarkUpPercentAge = document.querySelector(`#lom`).value;
-      let show = document.querySelector(`#mercy`)
-      show.innerHTML = `${MarkUpPercentAge}`
-    }
-
-    let gohigh = document.querySelector(`.highestscore`).innerHTML;
-    secretNumber = Math.trunc(Math.random() * 20) + 1;
-    let find = document.querySelector(`.check`);
-
-    let theNumber = document.querySelector('.number');
-    let thebody = document.querySelector(`.ap`);
-    let myMessage = document.querySelector(`.message`);
-    let score = 20;
-    let restart = document.querySelector(`.reload`);
-
-    function scoreLine() {
-      score = score - 4;
-      if (score == 0) {
-        myMessage.innerHTML = `Game Over`;
-        myMessage.style.color = `white`
-        find.innerHTML = `Game Over`;
-        find.style.color = `red`;
-        find.style.background = `white`;
-        find.style.display = `none`
-        document.querySelector(`.mynumber`).value = "Please refresh the page";
-        thebody.style.backgroundColor = `red`;
-        theNumber.innerHTML = `The number is ${secretNumber}`;
-        restart.style.display = `block`;
-        document.querySelector(`.mynumber`).value = "Please restart";
-      }
-    }
-
-
-
-    let myEngine = function () {
-      let myGues = Number(document.querySelector(`.mynumber`).value);
-      if (!myGues || myGues < 1 || myGues > 20) {
-        myMessage.innerHTML = `You must put a valid number between 1 and 20`;
-        myMessage.style.color = `red`;
-        document.querySelector(`.mynumber`).value = "";
-        restart.style.display = `none`;
-        scoreLine()
-
-      }
-      else if (myGues < secretNumber) {
-        myMessage.innerHTML = `your guess is low`;
-        myMessage.style.color = "lightblue";
-        document.querySelector(`.mynumber`).value = "";
-        restart.style.display = `none`;
-        scoreLine()
-      }
-      else if (myGues > secretNumber) {
-        myMessage.innerHTML = `your guess is too high`;
-        myMessage.style.color = "lightblue";
-        document.querySelector(`.mynumber`).value = "";
-        restart.style.display = `none`;
-        scoreLine();
-      }
-      else if (myGues == secretNumber) {
-        myMessage.innerHTML = 'Correct';
-        myMessage.style.color = 'white';
-        thebody.style.background = `green`;
-        thebody.style.color = `white`;
-        theNumber.innerHTML = `The number is ${secretNumber} Correct`;
-        theNumber.style.color = `white`;
-        find.innerHTML = ` <h4> Score: ${score} </h4>`;
-        find.style.color = `green`;
-        find.style.background = `white`;
-        find.style.display = `block`;
-        restart.style.display = `block`;
-        restart.style.background = `white`;
-        restart.style.color = `green`;
-        document.querySelector(`.mynumber`).value = "Please restart";
-        if (gohigh < score) {
-          document.querySelector(`.highestscore`).innerHTML = `${score}`
-        }
-        else {
-          document.querySelector(`.highestscore`).innerHTML = `${gohigh}`
-        }
-
-      }
-
-    }
-    console.log(secretNumber);
-    find.addEventListener('click', myEngine);
-
-    function king() {
-      myMessage.innerHTML = `Start Guessing ......`;
-      let restart = document.querySelector(`.reload`);
-      let find = document.querySelector(`.check`);
-      restart.style.display = `none`;
-      find.style.background = `linear-gradient(90deg, rgb(11, 9, 44) 10%,  rgb(158, 158, 2) 70%)`;
-      find.innerHTML = `Check`;
-      find.style.color = `white`;
-      find.style.display = `block`;
-      document.querySelector(`.mynumber`).value = "";
-      thebody.style.background = `rgb(11, 11, 28)`;
-      myMessage.style.color = `white`;
-      theNumber.innerHTML = `The number is ? `;
-      score = 20;
-      secretNumber = Math.trunc(Math.random() * 20) + 1;
-      console.log(secretNumber);
-
-
-
-
-
-
-
-
-
-    }
-    function xma() {
-      let d = new Date()
-      let Months = [`january`, `feburary`, `march`, `april`, `may`, `june`, `july`, `august`, `septmber`, `october`, `november`, `december`];
-      let ho = d.getHours();
-      let mi = d.getMinutes();
-      let sec = d.getSeconds();
-      let da = d.getDate();
-      if (ho < 10) {
-        ho = `0` + ho;
-      }
-      if (da < 10) {
-        da = `0` + da;
-      }
-      if (mi < 10) {
-        mi = `0` + mi;
-      }
-      if (sec < 10) {
-        sec = `0` + sec;
-      }
-      let ab = document.querySelector(`#tund`).innerHTML = `${Months[d.getMonth()]} 
-      ${da}, ${ho} : ${mi} : ${sec}`;
-    }
-    xma()
-    setInterval(xma, 1000)
-
-
-    let countdown = new Date(`december 25 2023 00:00:00`).getTime();
-    function ma() {
-      let now = new Date().getTime();
-      let distance = countdown - now;
-      let days = Math.floor(distance / (24 * 60 * 60 * 1000));
-      let hours = Math.floor(distance % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
-      let minutes = Math.floor(distance % (60 * 60 * 1000) / (60 * 1000));
-      let seconds = Math.floor(distance % (60 * 1000) / (1000));
-      if (days == 0) {
-        clearInterval(remi);
-        document.querySelector(`#oro`).innerHTML = `HAPPY NEW YEAR`;
-        document.querySelector(`body`).style.backgroundColor = `green`
-      }
-      document.querySelector(`#tunde`).innerHTML = `${days}Days : ${hours}Hrs : ${minutes}Min : ${seconds}Sec`
-    }
-    xma()
-    let remi = setInterval(ma, 1000)
-
-
-    let jayz = document.getElementById(`collect`).value;
-let ty = 0;
-function addMe() {
-    let diago = document.getElementById('flog');
-    let cafe = document.getElementById(`song`);
-    jayz = document.getElementById(`collect`).value;
-    let tas = document.getElementById(`task`);
-    let tim = document.getElementById(`time`);
-    let ty = 0;
-
-    tas.innerHTML = jayz;
 
     let d = new Date()
     let ho = d.getHours();
@@ -866,228 +497,567 @@ function addMe() {
     ho = (ho < 10) ? "0" + ho : ho;
     min = (min < 10) ? "0" + min : min;
 
-    tim.innerHTML = ` ${ho} : ${mi}`;
+    tim = ` ${ho} : ${mi}`;
 
-    function frame() {
-        ++ty;
-        let mm = parseInt(ty / 60);
-        let ss = ty % 60;
+    let say = document.createTextNode(tim);
+    let vio = document.createElement(`td`);
+    vio.appendChild(say);
+    vibe.appendChild(vio);
 
-        mm = (mm < 10) ? "0" + mm : mm;
-        ss = (ss < 10) ? "0" + ss : ss;
 
-        diago.innerHTML = `${mm} :`;
-        cafe.innerHTML = ss;
-        if (mm == 1) {
-            clearInterval(un);
-            document.getElementById(`until`).innerHTML = `Expired`
+    let rita = document.createElement(`td`)
+    let shope = document.createElement(`span`);
+    let sock = document.createTextNode(`\u00d7`);
+    shope.appendChild(sock);
+    rita.appendChild(shope);
+    vibe.appendChild(rita)
+    shope.className = `there`;
+    shope.style.cursor = `pointer`
+    let wer = document.getElementsByClassName(`there`);
+    let y;
+    for (y = 0; y < wer.length; y++) {
+        wer[y].onclick = function () {
+            this.parentNode.innerHTML = `task Delected`
         }
     }
 
-    let un = setInterval(frame, 1000);
+
+    let unfam= document.createElement(`span`);
+    let meina= document.createTextNode(`\u2714`);
+    unfam.appendChild(meina);
+    rita.appendChild(unfam);
+    vibe.appendChild(rita);
+    unfam.className =`intelli`;
+    unfam.style.cursor = `pointer`
+    let telHell = document.getElementsByClassName(`intelli`);
+    let q;
+    for(q=0; q<telHell.length; q++){
+      telHell[q].onclick= function(){
+        this.parentNode.innerHTML=`task Marked Done`
+      }
+    }
+
+
     document.getElementById('collect').value = " ";
-    document.getElementById('collect').focus()
-}
-function edit() {
-    document.getElementById(`task`).innerHTML = " "
-    document.getElementById(`time`).innerHTML = " ";
-    document.getElementById(`flog`).innerHTML = " 00 ";
-    document.getElementById(`song`).innerHTML = " ";
     document.getElementById('collect').focus();
-    document.getElementById(`collect`).value = jayz;
-
-
-
-
 }
-function dele() {
-    document.getElementById(`task`).innerHTML = " "
-    document.getElementById(`time`).innerHTML = " "
-    document.getElementById(`until`).innerHTML = " "
-    document.getElementById(`collect`).innerHTML = " "
-}
-function mark() {
-    document.getElementById(`until`).innerHTML = `00 : 00`;
-    document.getElementById(`time`).innerHTML = "00 : 00 ";
-    document.getElementById(`task`).style.textDecoration = `line-through`;
-
-}
-let colsw = document.getElementById(`subin`);
-colsw.addEventListener(`click`, addMe)
+let cols = document.getElementById(`subin`);
+cols.addEventListener(`click`, addme);
 
 
 
-function popi() {
-    let seyi = document.createElement(`li`);
-    let english = document.getElementById(`eng`);
-    let foi = document.createTextNode(`English`);
-    let sag = document.getElementById(`dou`);
-    seyi.appendChild(foi);
-    sag.appendChild(seyi);
 
-    english.style.display = `none`
-    let shope = document.createElement(`span`);
-    let sock = document.createTextNode(`\u2714`);
-    shope.appendChild(sock);
-    seyi.appendChild(shope);
-    shope.id = `tune`;
-    shope.style.cursor = `pointer`
-    let cra = document.getElementById(`tune`);
-    cra.onclick = function () {
-        this.parentNode.style.display = `none `;
-        english.style.display = `block`
-    }
+      let ago = document.querySelector(`#min`);
+      let cago = document.querySelector(`#sec`);
+      let startbtn = document.getElementById('start');
+      let endbtn = document.getElementById('end');
+      let fare = document.querySelector(`.bucks`);
+      let gross = document.querySelector(`.toti`);
+      let pay = document.querySelector(`.lot`);
+      let pa = document.querySelector(`.pect`);
+      let rec = document.querySelector(`.receipt`);
+      let sek = 0;
+      let k;
 
+      function work() {
+        ++sek;
+        let mes = Number(parseInt(sek / 60));
+        let sis = sek % 60;
 
-}
-function pop() {
-    let seyi = document.createElement(`li`);
-    let englis = document.getElementById(`mat`);
-    let foi = document.createTextNode(`Mathematics`);
-    let sag = document.getElementById(`dou`);
-    seyi.appendChild(foi);
-    sag.appendChild(seyi);
+        mes = (mes < 10) ? "0" + mes : mes;
+        sis = (sis < 10) ? "0" + sis : sis;
 
-    englis.style.display = `none`
-    let shope = document.createElement(`span`);
-    let sock = document.createTextNode(`\u2714`);
-    shope.appendChild(sock);
-    seyi.appendChild(shope);
-    shope.id = `tun`;
-    shope.style.cursor = `pointer`
-    let cra = document.getElementById(`tun`);
-    cra.onclick = function () {
-        this.parentNode.style.display = `none `;
-        englis.style.display = `block`
-    }
+        ago.innerHTML = mes;
+        cago.innerHTML = sis;
+        let read = 50 * mes;
+        fare.innerHTML = read;
+        let ross = read + 800;
+        gross.innerHTML = ross;
+        let pec = 5 / 100 * ross;
+        pa.innerHTML = pec;
+        pay.innerHTML = pec + ross;
+      }
+      function Count() {
+        k = setInterval(work, 1000);
+      }
 
+      function startCount() {
+        Count();
+        sek = 0
+        cago.innerHTML = 0 + '0',
+          ago.innerHTML = 0 + '0',
+          startbtn.style.display = 'none';
+        endbtn.style.display = `block`;
+        rec.style.display = `none`
 
-}
-function poi() {
-    let seyi = document.createElement(`li`);
-    let english = document.getElementById(`comp`);
-    let foi = document.createTextNode(`Computer`);
-    let sag = document.getElementById(`dou`);
-    seyi.appendChild(foi);
-    sag.appendChild(seyi);
+      }
+      function endCount() {
+        clearInterval(k);
+        startbtn.style.display = `block`;
+        endbtn.style.display = `none`;
+        rec.style.display = `block`
+      }
 
-    english.style.display = `none`;
-    let shope = document.createElement(`span`);
-    let sock = document.createTextNode(`\u2714`);
-    shope.appendChild(sock);
-    seyi.appendChild(shope);
-    shope.id = `un`;
-    shope.style.cursor = `pointer`
-    let cra = document.getElementById(`un`);
-    let i = 0;
-    cra.onclick = function () {
-        this.parentNode.style.display = `none `;
-        english.style.display = `block`
-    }
-
-
-}
-function ppi() {
-    let seyi = document.createElement(`li`);
-    let englsh = document.getElementById(`civ`);
-    let foi = document.createTextNode(`Civic`);
-    let sag = document.getElementById(`dou`);
-    seyi.appendChild(foi);
-    sag.appendChild(seyi);
-
-    englsh.style.display = `none`
-    let shope = document.createElement(`span`);
-    let sock = document.createTextNode(`\u2714`);
-    shope.appendChild(sock);
-    seyi.appendChild(shope);
-    shope.id = `ne`;
-    shope.style.cursor = `pointer`
-    let cra = document.getElementById(`ne`);
-    let i = 0;
-    cra.onclick = function () {
-        this.parentNode.style.display = `none `;
-        englsh.style.display = `block`
-    }
-
-
-}
-function opi() {
-    let seyi = document.createElement(`li`);
-    let enlish = document.getElementById(`phy`);
-    let foi = document.createTextNode(`Physics`);
-    let sag = document.getElementById(`dou`);
-    seyi.appendChild(foi);
-    sag.appendChild(seyi);
-
-    enlish.style.display = `none`
-    let shope = document.createElement(`span`);
-    let sock = document.createTextNode(`\u2714`);
-    shope.appendChild(sock);
-    seyi.appendChild(shope);
-    shope.id = `une`;
-    shope.style.cursor = `pointer`
-    let cra = document.getElementById(`une`);
-    let i = 0;
-    cra.onclick = function () {
-        this.parentNode.style.display = `none `;
-        enlish.style.display = `block`
-    }
-
-
-}
-function pi() {
-    let seyi = document.createElement(`li`);
-    let nglish = document.getElementById(`chem`);
-    let foi = document.createTextNode(`Chemistry`);
-    let sag = document.getElementById(`dou`);
-    seyi.appendChild(foi);
-    sag.appendChild(seyi);
-
-    nglish.style.display = `none`
-    let shope = document.createElement(`span`);
-    let sock = document.createTextNode(`\u2714`);
-    shope.appendChild(sock);
-    seyi.appendChild(shope);
-    shope.id = `tne`;
-    shope.style.cursor = `pointer`
-    let cra = document.getElementById(`tne`);
-    cra.onclick = function () {
-        this.parentNode.style.display = `none `;
-        nglish.style.display = `block`
-    }
-
-
-}
-function po() {
-    let seyi = document.createElement(`li`);
-    let engli = document.getElementById(`bio`);
-    let foi = document.createTextNode(`Biology`);
-    let sag = document.getElementById(`dou`);
-    seyi.appendChild(foi);
-    sag.appendChild(seyi);
-
-    engli.style.display = `none`
-    let shope = document.createElement(`span`);
-    let sock = document.createTextNode(`\u2714`);
-    shope.appendChild(sock);
-    seyi.appendChild(shope);
-    shope.id = `tue`;
-    shope.style.cursor = `pointer`
-    let cra = document.getElementById(`tue`);
-    cra.onclick = function () {
-        this.parentNode.style.display = `none `;
-        engli.style.display = `block`
-    }
-
-
-}
+      startbtn.addEventListener('click', startCount);
+      endbtn.addEventListener('click', endCount);
 
 
 
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
+
+
+
+
+
+      function greet() {
+        let a = new Date().getHours();
+        if (a > 0 && a < 11) {
+          alert('Good Morning')
+        }
+        else if (a > 11 && a < 16) {
+          alert('Good afternoon')
+        }
+        else {
+          alert('Good Evening')
+        };
+      };
+      function seun() {
+        let resturant = {
+          name: 'chicken Republic',
+          categories: ['aficandish', 'chinesedish', 'calarbadish', 'indiadish', 'drink', 'soup', 'meat',],
+          drink: ['chivita', 'chiexotic', 'cocoa', 'fanta', '7up', 'evabottlewater',],
+          soup: ['egusi', 'ewedu', 'stew', 'ogbono', 'okoro',],
+          swallow: ['amala', 'semovita', 'akpu', 'fufu', 'eba',],
+          owner: 'mr okoro',
+          location: 'bodija',
+        };
+        alert(`i want ${resturant.categories[5]} ${resturant.soup[0]} and ${resturant.swallow[4]} i also want ${resturant.drink[3]}, thanks`);
+      };
+      function james() {
+        let age = prompt('what is Nigerian age ?');
+        let d = +age;
+        switch (d) {
+          case 50: alert('not close');
+            break;
+          case 59: alert('close');
+            break;
+          case 60: alert(' almost correct');
+            break;
+          case 63: alert('correct');
+            break;
+          case 64: alert('close');
+            break;
+          case 65: alert('close');
+            break;
+          default: alert('wrong');
+        };
+      };
+      let w, q;
+      function getAnswer() {
+        if (w == " " || q == "") {
+          ci.innerHTML = "insert a number"
+          ci.style.color = "red"
+        }
+        else if (isNaN(q) || isNaN(w)) {
+          ci.innerHTML = " insert a number"
+          ci.style.color = "red"
+        }
+      }
+      let ci = document.getElementById('answer');
+      let p = document.getElementById('symbol');
+
+      let rt = document.querySelectorAll('.but')
+
+      for (let i = 0; i < rt.length; i++) {
+
+        rt[i].addEventListener('click', function () {
+
+          getAnswer()
+          let w = Number(document.getElementById('input1').value);
+          let q = Number(document.getElementById('input2').value);
+          if (rt[i].value == 'add') {
+            let ko = w + q
+            p.innerHTML = "+";
+            ci.innerHTML = ` = ${ko}`
+            ci.style.color = 'green';
+
+          }
+          if (rt[i].value == 'sub') {
+            let ko = w - q
+            p.innerHTML = "-";
+            ci.innerHTML = ` = ${ko}`
+            ci.style.color = 'green';
+
+          }
+          if (rt[i].value == 'divi') {
+            let ko = w / q
+            p.innerHTML = "/";
+            ci.innerHTML = ` = ${ko}`
+            ci.style.color = 'green';
+
+          }
+          if (rt[i].value == 'multi') {
+            let ko = w * q
+            p.innerHTML = "X";
+            ci.innerHTML = ` = ${ko}`
+            ci.style.color = 'green';
+
+          }
+        })
+      };
+
+      function cla() {
+        let moneyInvested = Number(document.getElementById('iron').value);
+        let month = Number(document.getElementById('steel').value);
+        let loan = moneyInvested * 0.1;
+        let calow = moneyInvested + loan * month;
+        document.getElementById('payup').innerHTML = (`${calow}`)
+        document.getElementById('mote').innerHTML = (`${month} month`)
+
+      };
+
+
+      function seyi() {
+        let ser = document.querySelector('#winner')
+        let oneday = new Date().getDay()
+        let days = ['Sunday', 'Monday', "Tuesday", 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        if (oneday == 0) {
+          ser.innerHTML = (` <h2>Today is ${days[oneday]} go to church </h2>`)
+        }
+        else if (oneday == 5) {
+          ser.innerHTML = (` <h2>Today is ${days[oneday]} go to mosque </h2>`)
+        }
+        else if (oneday == 6) {
+          ser.innerHTML = (` <h2>Today is ${days[oneday]} go to party </h2>`)
+        }
+        else (
+          ser.innerHTML = (` <h2>Today is ${days[oneday]} go to work</h2>`)
+        )
+      }
+      function vibes() {
+        let n;
+        n = prompt('enter a number from 1 to 70');
+        if (!n || n < 1 || n > 70) {
+          alert(`enter a number from 1 to 70`)
+        }
+        else if (n == 2) {
+          alert(`the number is a prime number`)
+        }
+        else {
+          let i;
+          for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+              alert(`you are wrong, ${n} is not a prime number`);
+              break;
+            }
+          }
+          if (n == i) {
+            alert(`this is a prime number`)
+          }
+        }
+      }
+      function opeyemi() {
+        let firstMoney = Number(document.querySelector(`#lon`).value);
+        let MarkUpPercentAge = Number(document.querySelector(`#lom`).value);
+        let MonthsYear = Number(document.querySelector(`#stee`).value);
+        let Percentage = MarkUpPercentAge / 100;
+        let TotalAmount = firstMoney * Percentage + firstMoney;
+        let jk = MonthsYear;
+        let Inter = TotalAmount / MonthsYear;
+        document.querySelector(`#fre`).innerHTML = `${Inter} naria`;
+        document.querySelector(`#frt`).innerHTML = `${jk}`;
+        document.querySelector(`#fry`).innerHTML = `${TotalAmount} naria`;
+      }
+      function cha() {
+        let MarkUpPercentAge = document.querySelector(`#lom`).value;
+        let show = document.querySelector(`#mercy`)
+        show.innerHTML = `${MarkUpPercentAge}`
+      }
+
+      let gohigh = document.querySelector(`.highestscore`).innerHTML;
+      secretNumber = Math.trunc(Math.random() * 20) + 1;
+      let find = document.querySelector(`.check`);
+
+      let theNumber = document.querySelector('.number');
+      let thebody = document.querySelector(`.ap`);
+      let myMessage = document.querySelector(`.message`);
+      let score = 20;
+      let restart = document.querySelector(`.reload`);
+
+      function scoreLine() {
+        score = score - 4;
+        if (score == 0) {
+          myMessage.innerHTML = `Game Over`;
+          myMessage.style.color = `white`
+          find.innerHTML = `Game Over`;
+          find.style.color = `red`;
+          find.style.background = `white`;
+          find.style.display = `none`
+          document.querySelector(`.mynumber`).value = "Please refresh the page";
+          thebody.style.backgroundColor = `red`;
+          theNumber.innerHTML = `The number is ${secretNumber}`;
+          restart.style.display = `block`;
+          document.querySelector(`.mynumber`).value = "Please restart";
+        }
+      }
+
+
+
+      let myEngine = function () {
+        let myGues = Number(document.querySelector(`.mynumber`).value);
+        if (!myGues || myGues < 1 || myGues > 20) {
+          myMessage.innerHTML = `You must put a valid number between 1 and 20`;
+          myMessage.style.color = `red`;
+          document.querySelector(`.mynumber`).value = "";
+          restart.style.display = `none`;
+          scoreLine()
+
+        }
+        else if (myGues < secretNumber) {
+          myMessage.innerHTML = `your guess is low`;
+          myMessage.style.color = "lightblue";
+          document.querySelector(`.mynumber`).value = "";
+          restart.style.display = `none`;
+          scoreLine()
+        }
+        else if (myGues > secretNumber) {
+          myMessage.innerHTML = `your guess is too high`;
+          myMessage.style.color = "lightblue";
+          document.querySelector(`.mynumber`).value = "";
+          restart.style.display = `none`;
+          scoreLine();
+        }
+        else if (myGues == secretNumber) {
+          myMessage.innerHTML = 'Correct';
+          myMessage.style.color = 'white';
+          thebody.style.background = `green`;
+          thebody.style.color = `white`;
+          theNumber.innerHTML = `The number is ${secretNumber} Correct`;
+          theNumber.style.color = `white`;
+          find.innerHTML = ` <h4> Score: ${score} </h4>`;
+          find.style.color = `green`;
+          find.style.background = `white`;
+          find.style.display = `block`;
+          restart.style.display = `block`;
+          restart.style.background = `white`;
+          restart.style.color = `green`;
+          document.querySelector(`.mynumber`).value = "Please restart";
+          if (gohigh < score) {
+            document.querySelector(`.highestscore`).innerHTML = `${score}`
+          }
+          else {
+            document.querySelector(`.highestscore`).innerHTML = `${gohigh}`
+          }
+
+        }
+
+      }
+      console.log(secretNumber);
+      find.addEventListener('click', myEngine);
+
+      function king() {
+        myMessage.innerHTML = `Start Guessing ......`;
+        let restart = document.querySelector(`.reload`);
+        let find = document.querySelector(`.check`);
+        restart.style.display = `none`;
+        find.style.background = `linear-gradient(90deg, rgb(11, 9, 44) 10%,  rgb(158, 158, 2) 70%)`;
+        find.innerHTML = `Check`;
+        find.style.color = `white`;
+        find.style.display = `block`;
+        document.querySelector(`.mynumber`).value = "";
+        thebody.style.background = `rgb(11, 11, 28)`;
+        myMessage.style.color = `white`;
+        theNumber.innerHTML = `The number is ? `;
+        score = 20;
+        secretNumber = Math.trunc(Math.random() * 20) + 1;
+        console.log(secretNumber);
+
+
+
+
+
+
+
+
+
+      }
+      function xma() {
+        let d = new Date()
+        let Months = [`january`, `feburary`, `march`, `april`, `may`, `june`, `july`, `august`, `septmber`, `october`, `november`, `december`];
+        let ho = d.getHours();
+        let mi = d.getMinutes();
+        let sec = d.getSeconds();
+        let da = d.getDate();
+        if (ho < 10) {
+          ho = `0` + ho;
+        }
+        if (da < 10) {
+          da = `0` + da;
+        }
+        if (mi < 10) {
+          mi = `0` + mi;
+        }
+        if (sec < 10) {
+          sec = `0` + sec;
+        }
+        let ab = document.querySelector(`#tund`).innerHTML = `${Months[d.getMonth()]} 
+      ${da}, ${ho} : ${mi} : ${sec}`;
+      }
+      xma()
+      setInterval(xma, 1000)
+
+
+      let countdown = new Date(`december 25 2023 00:00:00`).getTime();
+      function ma() {
+        let now = new Date().getTime();
+        let distance = countdown - now;
+        let days = Math.floor(distance / (24 * 60 * 60 * 1000));
+        let hours = Math.floor(distance % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+        let minutes = Math.floor(distance % (60 * 60 * 1000) / (60 * 1000));
+        let seconds = Math.floor(distance % (60 * 1000) / (1000));
+        if (days == 0) {
+          clearInterval(remi);
+          document.querySelector(`#oro`).innerHTML = `HAPPY NEW YEAR`;
+          document.querySelector(`body`).style.backgroundColor = `green`
+        }
+        document.querySelector(`#tunde`).innerHTML = `${days}Days : ${hours}Hrs : ${minutes}Min : ${seconds}Sec`
+      }
+      xma()
+      let remi = setInterval(ma, 1000)
+
+
+
+
+      function taiwo() {
+        let piri = document.getElementById('input').value;
+        let subje = document.getElementById(`myown`);
+        let para = document.createElement(`li`);
+        let abu = document.createTextNode(piri);
+        para.appendChild(abu);
+        subje.appendChild(para);
+
+        let shope = document.createElement(`span`);
+        let sock = document.createTextNode(`\u2714`);
+        shope.appendChild(sock);
+        para.appendChild(shope)
+        shope.title = 'mark done';
+        shope.style.backgroundColor = `green`;
+        shope.style.color = `white`;
+        shope.style.cursor = `pointer`;
+        shope.className = `pami`
+        let doy = document.getElementsByClassName(`pami`);
+        let i;
+        for (i = 0; i < doy.length; i++) {
+          doy[i].onclick = function () {
+            this.parentNode.style.textDecoration = `line-through`
+          }
+
+        }
+
+        let ghk = document.createElement(`span`);
+        let ftu = document.createTextNode(`\u00d7`);
+        ghk.appendChild(ftu);
+        para.appendChild(ghk);
+        ghk.style.color = `white`;
+        ghk.style.background = `red`;
+        ghk.style.cursor = `pointer`;
+        ghk.className = `rewq`;
+        let drt = document.getElementsByClassName('rewq');
+        let y;
+        for (y = 0; y < drt.length; y++) {
+          drt[y].onclick = function () {
+            this.parentNode.style.display = `none`
+          }
+        }
+
+
+
+
+
+
+
+
+        document.getElementById('input').value = " ";
+        document.getElementById('input').focus()
+
+
+
+
+      }
+
+      let availableSubject = [`English`, `Economics`, `Mathematics`, `yoruba`, `Civic`, `Computer`, `Social Studies`];
+      function addSubjectToSelecte(subject) {
+        let index = availableSubject.indexOf(subject);
+        if (index > -1) {
+          availableSubject.splice(index, 1);
+          updateAvailableSubjectTabl();
+          updateSelectedSubjectsTabl(subject);
+        }
+
+      }
+      function removeSubjectFromSelecte(subject) {
+        let selectedSubjectTableBody = document.getElementById("yourownbody");
+        let row = document.getElementById(subject);
+        selectedSubjectTableBody.removeChild(row);
+        availableSubject.push(subject);
+        updateAvailableSubjectTabl();
+      }
+      function updateAvailableSubjectTabl() {
+        let availableSubjectBody = document.getElementById("ourownbody");
+        availableSubjectBody.innerHTML = "";
+
+        for (let i = 0; i < availableSubject.length; i++) {
+          let subject = availableSubject[i];
+          let win = document.createElement("tr");
+
+          let tunde = document.createElement("td");
+          tunde.appendChild(document.createTextNode(subject));
+
+          let seyi = document.createElement("td");
+          let addButton = document.createElement("input");
+          addButton.type = 'checkbox';
+          addButton.onclick = function () {
+            addSubjectToSelecte(subject);
+          };
+          seyi.appendChild(addButton);
+
+          win.appendChild(tunde);
+          win.appendChild(seyi);
+          availableSubjectBody.appendChild(win);
+        }
+      }
+      function updateSelectedSubjectsTabl(subject) {
+        let selectedSubjectsTableBody = document.getElementById("yourownbody");
+        let win = document.createElement("tr");
+        win.id = subject;
+
+        let daniel = document.createElement("td");
+        daniel.appendChild(document.createTextNode(subject));
+
+        let feyi = document.createElement("td");
+        let remove = document.createElement("span");
+        let paul = document.createTextNode("\u00d7");
+        remove.appendChild(paul);
+        remove.style.cursor = `pointer`;
+        remove.style.fontSize = ` 25px`;
+        remove.style.background=`red`
+        remove.onclick = function () {
+          removeSubjectFromSelecte(subject);
+        };
+        feyi.appendChild(remove);
+
+        win.appendChild(daniel);
+        win.appendChild(feyi);
+        selectedSubjectsTableBody.appendChild(win);
+      }
+      updateAvailableSubjectTabl();
+
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
