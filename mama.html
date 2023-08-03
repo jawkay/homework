@@ -25,7 +25,8 @@
   <div class="song">
     <a href="#" style="color: grey;"><i class="fa fa-angle-up"></i></a>
   </div>
-  <nav id="navbar-example2" class="navbar  px-3 mb-3" style="position: sticky; top: 0px; background: rgb(15, 15, 37); font-size: 12px;">
+  <nav id="navbar-example2" class="navbar  px-3 mb-3"
+    style="position: sticky; top: 0px; background: rgb(15, 15, 37); font-size: 12px;">
     <h1 style="color: white;">Assignment Using Function <span class="jk">(James work) </span></h1>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -416,10 +417,10 @@
       <input type="text" id="collect" placeholder="Task here"> <button id="subin"
         style="background-color: rgb(46, 102, 5); height: 40px; color: white; cursor: pointer; width: 12%;">+
         ADD</button>
-      <input type="number" id="secon" placeholder="Minutes Here">
+      <input type="number" id="bread" placeholder="Minutes Here">
       <br>
       <br>
-      <table id="badsin" border="3" cellpadding="10" width="60%" style="margin: 0px auto;">
+      <table id="badsin" border="3" cellpadding="10" width="80%" style="margin: 0px auto;">
         <thead>
           <tr>
             <td>Task</td>
@@ -427,6 +428,7 @@
             <td>Delete</td>
             <td>Mark</td>
             <td>Edit</td>
+            <td>Until<i>(countdown)</i></td>
           </tr>
         </thead>
         <tbody id="goodsin">
@@ -434,7 +436,7 @@
         </tbody>
 
       </table>
-       <p style="margin-top: 30px;"><i>(STILL WORKING ON THIS PROJECT PLEASE)</i></p>
+      <p style="margin-top: 30px;"><i>(STILL WORKING ON THIS PROJECT PLEASE)</i></p>
     </div>
   </div>
 
@@ -504,15 +506,18 @@
       <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Student</a> </p>
       <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Programmers</a> </p>
       <p> <a href="https://valuemax.com" style="color: white; font-size: 20px; text-decoration: none;">Valuemax</a> </p>
-      <p><a href="https://edxghbj.github.io/world/swift.html" style="color: white; font-size: 20px; text-decoration: none;">Check out my projects</a>
+      <p><a href="https://edxghbj.github.io/world/swift.html"
+          style="color: white; font-size: 20px; text-decoration: none;">Check out my projects</a>
     </div>
     <div>
       <p style="font-size: 12px; color: white;">Contact Us</p> <br>
       <p><a href="tel: +2349045757597" style="color: white; font-size: 20px; text-decoration: none;">Call</a> </p>
-      <p><a href="mail to: kayodeolasunkanmi75@gmail.com" style="color: white; font-size: 20px; text-decoration: none;">Email</a>
+      <p><a href="mail to: kayodeolasunkanmi75@gmail.com"
+          style="color: white; font-size: 20px; text-decoration: none;">Email</a>
       </p>
       <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">james Kayode @facebook</a> </p>
-      <p><a href="https://twitter.com/James85189076?t=WVLfJuBnJ2SloTFth9gudw&s=09" style="color: white; font-size: 20px; text-decoration: none;">james kayode@twitter pls follow</a>
+      <p><a href="https://twitter.com/James85189076?t=WVLfJuBnJ2SloTFth9gudw&s=09"
+          style="color: white; font-size: 20px; text-decoration: none;">james kayode@twitter pls follow</a>
     </div>
   </div>
   <script>
@@ -569,7 +574,7 @@
       unfam.className = `intelli`;
       unfam.style.cursor = `pointer`
       let telHell = document.getElementsByClassName(`intelli`);
-      let q;
+
       for (q = 0; q < telHell.length; q++) {
         telHell[q].onclick = function () {
           this.parentNode.style.textDecoration = `line-through`
@@ -592,8 +597,41 @@
         }
       }
 
+      let oya = document.createElement(`td`);
+      function countstart() {
+        const minutesInput = document.getElementById("bread");
+        let countdownDisplay;
+        let countdownMinutes = parseInt(minutesInput.value);
 
+        if (isNaN(countdownMinutes) || countdownMinutes <= 0) {
+          countdownDisplay = "Please enter a valid number of minutes greater than 0.";
+          return;
+        }
 
+        let totalSeconds = countdownMinutes * 60;
+
+        function formatTime(time) {
+          let minutes = Math.floor(time / 60);
+          let seconds = time % 60;
+          return `${minutes}:${seconds}`;
+        }
+
+        function countdown() {
+          totalSeconds--;
+          countdownDisplay = formatTime(totalSeconds);
+          if (totalSeconds > 0) {
+            setTimeout(countdown, 1000); // Delay 1000ms (1 second) before the next countdown
+          } else {
+            countdownDisplay = "Expired!";
+          }
+        }
+
+        countdown();        
+        oya.appendChild(countdownDisplay);
+        vibe.appendChild(oya);
+
+        // Start the countdown immediately
+      }
 
 
 
@@ -602,9 +640,6 @@
     }
     let cols = document.getElementById(`subin`);
     cols.addEventListener(`click`, addme);
-
-
-
 
     let ago = document.querySelector(`#min`);
     let cago = document.querySelector(`#sec`);
@@ -1042,6 +1077,11 @@
 
 
     }
+    document.addEventListener(`keydown`, function (e) {
+      if (e.key === 'Enter') {
+        taiwo();
+      }
+    })
 
     let availableSubject = [`English`, `Economics`, `Mathematics`, `yoruba`, `Civic`, `Computer`, `Social Studies`];
     function addSubjectToSelecte(subject) {

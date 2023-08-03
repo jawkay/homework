@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <label for="minutesInput">Enter time in minutes: </label>
+    <input type="number" id="minutesInput">
+    <button onclick="startCountdown()">Start Countdown</button>
+    <p id="countdownDisplay"></p>
+
+    <script>
+        function startCountdown() {
+            const minutesInput = document.getElementById("minutesInput");
+            const countdownDisplay = document.getElementById("countdownDisplay");
+            let countdownMinutes = parseInt(minutesInput.value);
+
+            if (isNaN(countdownMinutes) || countdownMinutes <= 0) {
+                countdownDisplay.innerText = "Please enter a valid number of minutes greater than 0.";
+                return;
+            }
+
+            let totalSeconds = countdownMinutes * 60;
+
+            function formatTime(time) {
+                let minutes = Math.floor(time / 60);
+                let seconds = time % 60;
+                return `${minutes}:${seconds}`;
+            }
+
+            function countdown() {
+                totalSeconds--;
+                countdownDisplay.innerText = formatTime(totalSeconds);
+
+                if (totalSeconds > 0) {
+                    setTimeout(countdown, 1000); // Delay 1000ms (1 second) before the next countdown
+                } else {
+                    countdownDisplay.innerText = "Expired!";
+                }
+                console.log(countdownDisplay)
+            }
+
+            countdown(); // Start the countdown immediately
+        }
+    </script>
+</body>
+</html>
