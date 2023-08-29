@@ -285,9 +285,10 @@
         <option value="12">Twelve Month</option>
       </select> <br> <br>
       <button onclick="cla()">Calculate</button>
-      <p style="font-size: 30px; color: rgb(255, 243, 5);"> The interest rate is 10% per month , so you to withdraw
-        <span id="payup" style="color: rgb(0, 153, 255);"></span> in the next <span id="mote"
-          style="color:rgb(0, 179, 255)"></span>
+      <p style="font-size: 18px; color: rgb(255, 243, 5); text-align: justify; margin-left: 40px;"><i> The Investment
+          rate is 10% per month </i> <br> <br>
+
+        <span class="fike" style="color: rgb(0, 153, 255); font-size: 30px;"></span>
       </p>
     </div>
   </div>
@@ -298,7 +299,7 @@
       <h1>Loan Calculator</h1>
       <label> <b>Funding Amount </b></label> <br>
       <input id="lon" placeholder="input your amount" class="in"> <br> <br> <br>
-      <label><b>MarkUp %</b></label> <br>
+      <label><b>interest rate %</b></label> <br>
 
       <input class="in" value="10" id="lom" onkeyup="cha()" type="number"> <br> <br> <br>
       <label><b>Funding Period</b></label> <br>
@@ -317,12 +318,9 @@
         <option value="11">Eleven Month</option>
         <option value="12">Twelve Month</option>
       </select> <br> <br>
-      <p><i style="color: rgb(0, 157, 255);;">Your markup has been assumed at <span id="mercy">10</span>%</i></p>
+      <p><i style="color: rgb(0, 157, 255);;">Your interest rate has been assumed at <span id="mercy">10</span>%</i></p>
       <button onclick="opeyemi()">Calculate</button>
-      <p style="font-size: 30px; color: rgb(255, 234, 5); text-shadow: 5px 5px 10px black;"> Your monthly repayment will
-        be <span id="fre" style="color: rgb(0, 157, 255); font-size: 20px;">0</span> with <span id="frt"
-          style="color: rgb(0, 157, 255); font-size: 20px;">0</span> scheduled number of payments The total repayment on
-        this funding will be <span id="fry" style="color: rgb(0, 157, 255); font-size: 20px;">0</span>
+      <p class="kill" style="font-size: 30px; color: rgb(255, 234, 5); text-shadow: 5px 5px 10px black;">
       </p>
     </div>
 
@@ -417,7 +415,6 @@
       <input type="text" id="collect" placeholder="Task here"> <button id="subin"
         style="background-color: rgb(46, 102, 5); height: 40px; color: white; cursor: pointer; width: 12%;">+
         ADD</button>
-      <input type="number" id="bread" placeholder="Minutes Here">
       <br>
       <br>
       <table id="badsin" border="3" cellpadding="10" width="80%" style="margin: 0px auto;">
@@ -487,6 +484,9 @@
       </div>
     </div>
   </div>
+  <div>
+    <button onclick="david()">Prompt Calcutor </button>
+  </div>
 
 
 
@@ -495,18 +495,7 @@
   <div class="kola">
     <h1 style="text-align: center; color: white;">My Informations :</h1>
     <div>
-      <p style="font-size: 12px; color: white;">What we do</p> <br>
-      <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Assignment</a> </p>
-      <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;">Homework</a> </p>
-      <p> <a href="" style="color: white; font-size: 20px; text-decoration: none;"> ClassWork</a> </p>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Learning</a> </p>
-    </div>
-    <div>
-      <p style="font-size: 12px; color: white;">Who we are</p> <br>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Student</a> </p>
-      <p><a href="" style="color: white; font-size: 20px; text-decoration: none;">Programmers</a> </p>
-      <p> <a href="https://valuemax.com" style="color: white; font-size: 20px; text-decoration: none;">Valuemax</a> </p>
-      <p><a href="https://edxghbj.github.io/world/swift.html"
+      <p><a href="https://jawkay.github.io/project/swift.html"
           style="color: white; font-size: 20px; text-decoration: none;">Check out my projects</a>
     </div>
     <div>
@@ -521,6 +510,62 @@
     </div>
   </div>
   <script>
+    function david() {
+      alert(`You are about to perform Prompt Calculator`);
+      let ope = Number(prompt(`Click the below to know what to perform
+      1. normal calculation (+,-,x,/)
+      2. Higher trigometry (sin,cos,tan)
+      3. Other claculation`));
+      if (ope == 1) {
+        let tunde = Number(prompt(`insert a number`));
+        let seyi = prompt(`insert +,-,/,*`);
+        let jin = Number(prompt(`insert second Number`));
+        if (seyi == '+') {
+          let du = tunde + jin
+          alert(`ANS = ${du}`)
+        }
+        else if (seyi == '-') {
+          let du = tunde - jin
+          alert(`ANS = ${du}`)
+        }
+        else if (seyi == '/') {
+          let du = tunde / jin
+          alert(`ANS = ${du}`)
+        }
+        else if (seyi == '*') {
+          let du = tunde * jin
+          alert(`ANS = ${du}`)
+        }
+        else {
+          alert(`Please inser a good Number`)
+        }
+      }
+      else if (ope == 2) {
+        let sey = prompt(`insert sin, cos, tan`);
+        let tun = Number(prompt(`insert a number`));
+        if (sey == 'sin') {
+          let duq = tun / 1000
+          alert(`ANS = ${duq}`)
+        }
+        else if (sey = 'cos') {
+          let duq = tun / 3000
+          alert(`ANS = ${duq}`)
+        }
+        else if (sey == 'tan') {
+          let duq = tun / 5000
+          alert(`ANS = ${duq}`)
+        }
+        else {
+          alert(`Please insert a good Number`)
+        }
+      }
+    }
+
+
+
+
+
+    // TO DO LIST
 
     function addme() {
       let coll = document.getElementById(`collect`).value;
@@ -597,47 +642,47 @@
         }
       }
 
-      let oya = document.createElement(`td`);
-      function countstart() {
-        const minutesInput = document.getElementById("bread");
-        let countdownDisplay;
-        let countdownMinutes = parseInt(minutesInput.value);
+      const countdown = document.createElement('td');
+      countdown.textContent = '00:00:00';
+      startCountdown(countdown);
+      vibe.appendChild(countdown)
+      function startCountdown(countdownElement) {
+            const targetTime = new Date().getTime() + (prompt('How Many Minutes') * 60 * 1000);
 
-        if (isNaN(countdownMinutes) || countdownMinutes <= 0) {
-          countdownDisplay = "Please enter a valid number of minutes greater than 0.";
-          return;
+            function updateCountdown() {
+                const currentTime = new Date().getTime();
+                const timeDifference = targetTime - currentTime;
+
+                if (timeDifference <= 0) {
+                    countdownElement.textContent = '00:00:00';
+                } else {
+                    const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                    countdownElement.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+                }
+            }
+
+            function formatTime(time) {
+                return time < 10 ? `0${time}` : time;
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
         }
-
-        let totalSeconds = countdownMinutes * 60;
-
-        function formatTime(time) {
-          let minutes = Math.floor(time / 60);
-          let seconds = time % 60;
-          return `${minutes}:${seconds}`;
-        }
-
-        function countdown() {
-          totalSeconds--;
-          countdownDisplay = formatTime(totalSeconds);
-          if (totalSeconds > 0) {
-            setTimeout(countdown, 1000); // Delay 1000ms (1 second) before the next countdown
-          } else {
-            countdownDisplay = "Expired!";
-          }
-        }
-
-        countdown();        
-        oya.appendChild(countdownDisplay);
-        vibe.appendChild(oya);
-
-        // Start the countdown immediately
-      }
 
 
 
       document.getElementById('collect').value = " ";
       document.getElementById('collect').focus();
     }
+
+    // TO DO LIST ENDS
+
+
+
+
     let cols = document.getElementById(`subin`);
     cols.addEventListener(`click`, addme);
 
@@ -664,12 +709,23 @@
       ago.innerHTML = mes;
       cago.innerHTML = sis;
       let read = 50 * mes;
-      fare.innerHTML = read;
+      fare.innerHTML = `${read}.${sis}`;
       let ross = read + 800;
-      gross.innerHTML = ross;
+      gross.innerHTML = `${ross}.${sis}`;
       let pec = 5 / 100 * ross;
-      pa.innerHTML = pec;
-      pay.innerHTML = pec + ross;
+      if (mes < 1) {
+        pa.innerHTML = `${pec}.${sis}`;
+      }
+      else {
+        pa.innerHTML = `${pec}${sis}`;
+      }
+
+      if (mes < 1) {
+        pay.innerHTML = `${pec + ross}.${sis}`;
+      }
+      else {
+        pay.innerHTML = `${pec + ross}${sis}`;
+      }
     }
     function Count() {
       k = setInterval(work, 1000);
@@ -680,7 +736,7 @@
       sek = 0
       cago.innerHTML = 0 + '0',
         ago.innerHTML = 0 + '0',
-        startbtn.style.display = 'none';
+        startbtn.style.display = 'block';
       endbtn.style.display = `block`;
       rec.style.display = `none`
 
@@ -804,8 +860,7 @@
       let month = Number(document.getElementById('steel').value);
       let loan = moneyInvested * 0.1;
       let calow = moneyInvested + loan * month;
-      document.getElementById('payup').innerHTML = (`${calow}`)
-      document.getElementById('mote').innerHTML = (`${month} month`)
+      document.querySelector('.fike').innerHTML = ` the total payment is ${calow} with ${month} number of payment`;
 
     };
 
@@ -857,9 +912,7 @@
       let TotalAmount = firstMoney * Percentage + firstMoney;
       let jk = MonthsYear;
       let Inter = TotalAmount / MonthsYear;
-      document.querySelector(`#fre`).innerHTML = `${Inter} naria`;
-      document.querySelector(`#frt`).innerHTML = `${jk}`;
-      document.querySelector(`#fry`).innerHTML = `${TotalAmount} naria`;
+      document.querySelector(`.kill`).innerHTML = ` Your monthly repayment will be ${Inter} naria with ${jk} number of payment and total number of payment is ${TotalAmount} naria`;
     }
     function cha() {
       let MarkUpPercentAge = document.querySelector(`#lom`).value;
@@ -915,7 +968,7 @@
       }
       else if (myGues > secretNumber) {
         myMessage.innerHTML = `your guess is too high`;
-        myMessage.style.color = "lightblue";
+        myMessage.style.color = "orange";
         document.querySelector(`.mynumber`).value = "";
         restart.style.display = `none`;
         scoreLine();
@@ -923,8 +976,6 @@
       else if (myGues == secretNumber) {
         myMessage.innerHTML = 'Correct';
         myMessage.style.color = 'white';
-        thebody.style.background = `green`;
-        thebody.style.color = `white`;
         theNumber.innerHTML = `The number is ${secretNumber} Correct`;
         theNumber.style.color = `white`;
         find.innerHTML = ` <h4> Score: ${score} </h4>`;
@@ -936,12 +987,8 @@
         restart.style.color = `green`;
         document.querySelector(`.mynumber`).value = "Please restart";
         if (gohigh < score) {
-          document.querySelector(`.highestscore`).innerHTML = `${score}`
+          document.querySelector(`.highestscore`).innerHTML = score
         }
-        else {
-          document.querySelector(`.highestscore`).innerHTML = `${gohigh}`
-        }
-
       }
 
     }
@@ -958,7 +1005,6 @@
       find.style.color = `white`;
       find.style.display = `block`;
       document.querySelector(`.mynumber`).value = "";
-      thebody.style.background = `rgb(11, 11, 28)`;
       myMessage.style.color = `white`;
       theNumber.innerHTML = `The number is ? `;
       score = 20;
